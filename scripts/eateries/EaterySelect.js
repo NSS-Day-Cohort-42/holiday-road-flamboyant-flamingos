@@ -1,6 +1,6 @@
 import { useEateries, getEateries } from "./EateryProvider.js";
 
-const contentTarget = document.querySelector(".eateries--dropdown")
+const contentTarget = document.querySelector(".eateries__dropdown")
 
 const render = (eateriesCollection) => { 
     contentTarget.innerHTML = `
