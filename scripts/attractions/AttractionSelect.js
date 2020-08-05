@@ -1,11 +1,13 @@
 import { getAttractions, useAttractions } from "./AttractionProvider.js";
 
-const contentTarget = document.querySelector(".attractions--dropdown")
+const contentTarget = document.querySelector(".attractions__dropdown")
+
+
 
 export const AttractionSelect = () => { 
     getAttractions().then(() => {
         const attractions = useAttractions()
-        
+
         render(attractions)
     })
 
@@ -13,7 +15,7 @@ export const AttractionSelect = () => {
     const render = attractionCollection => {
 
         contentTarget.innerHTML = `
-            <select class="attraction--dropdown" id="attractionSelect">
+            <select class="dropdown" id="attractionSelect">
                 <option value="0">Attractions</option>
                 ${
                     attractionCollection.map(
