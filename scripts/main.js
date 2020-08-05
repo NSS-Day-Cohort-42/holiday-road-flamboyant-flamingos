@@ -1,5 +1,7 @@
-import { EaterySelect } from "./eateries/EaterySelect.js";
+import {parksSelect} from "./parks/ParkSelect.js"
 import { AttractionSelect } from "./attractions/AttractionSelect.js";
+import { EaterySelect } from "./eateries/EaterySelect.js";
 
-AttractionSelect()
 EaterySelect()
+AttractionSelect()
+parksSelect()
