@@ -1,3 +1,5 @@
+import {default} from "./Settings.js"
+
 let parks = []
 
 export const useParksCopy = () => {
