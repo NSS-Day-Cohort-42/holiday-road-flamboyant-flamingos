@@ -1,0 +1,8 @@
+.attractions--dropdown { 
+    display: flex; 
+    justify-content: center;
+}
+
+.attraction--dropdown {
+    cursor: crosshair;
+}
