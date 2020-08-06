@@ -1,6 +1,18 @@
 import { useEateries, getEateries } from "./EateryProvider.js";
 
 const contentTarget = document.querySelector(".eateries__selector")
+const eventHub = document.querySelector(".container")
+
+contentTarget.addEventListener("change", (changeEvent) => {
+    if(changeEvent.target.id === "eaterySelect") {
+        const customEvent= new CustomEvent("eaterySelected", {
+            detail: {
+                businessName: changeEvent.target.value
+            }
+    })
+    eventHub.dispatchEvent(customEvent)
+    }
+})
 
 const render = (eateriesCollection) => { 
     contentTarget.innerHTML = `

@@ -5,10 +5,9 @@ const eventHub = document.querySelector(".container")
 
 contentTarget.addEventListener("change", (changeEvent) => {
     if(changeEvent.target.id === "parkSelect") {
-        const selectedPark = changeEvent.target.value
         const customEvent= new CustomEvent("parkSelected", {
             detail: {
-                park: selectedPark
+                name: changeEvent.target.value
             }
     })
     eventHub.dispatchEvent(customEvent)
@@ -22,7 +21,7 @@ const render = parksCollection => {
         ${
             parksCollection.map(
                 parksObj => {
-                    return `<option value="${parksObj.id}"> ${parksObj.name}</option>`
+                    return `<option value="${parksObj.name}"> ${parksObj.name}</option>`
             }
          ).join("")
         }
