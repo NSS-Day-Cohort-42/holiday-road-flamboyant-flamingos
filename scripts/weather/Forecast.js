@@ -6,7 +6,6 @@ const contentTarget = document.querySelector(".forecast")
 
 eventHub.addEventListener("parkSelected", () => {
     Forecast()
-    console.log("parkSelected")
 })
 
 const render = (forecastData) => {
