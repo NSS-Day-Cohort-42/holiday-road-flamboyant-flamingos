@@ -11,26 +11,45 @@
     <main class="container">
         <!-- containter for all Destination Selectors -->
         <article class="destinationSelectors"> 
-            <h2 class="destinationSelectors__heading">Choose your Destinations:</h2>
-            <div class="selector parks__selector"></div>
-            <div class="selector attractions__selector"></div>
-            <div class="selector eateries__selector"></div>
+        <h2 class="destinationSelectors__heading">Choose your Destinations:</h2>
+            <section>
+                <h3 class="selectorHeading parks__selectorHeading">Parks</h3>
+                <div class="selector parks__selector"></div>
+            </section>    
+            <section>
+                <h3 class="selectorHeading attractions__selectorHeading">Attractions</h3>
+                <div class="selector attractions__selector"></div>
+                </section>
+            <section>
+                <h3 class="selectorHeading selectorHeading eateries__selectorHeading">Eateries</h3>
+                <div class="selector eateries__selector"></div>
+            </section>    
         </article>
         <!-- container for all elements of the Itinerary Preview -->
         <article class="itineraryPreview">
-            <h2 class="itineraryPreview__heading">Preview and Save Your Trip:</h2>
+        <h2 class="itineraryPreview__heading">Preview and Save Your Trip:</h2>
             <!-- container for all Destination Previews  -->
             <div class="destinationPreviews">
-                <section class="preview park__preview"></section>
-                <section class="preview attraction__preview"></section>
-                <section class="preview eatery__preview"></section>
+                <section>
+                    <h2 class="previewHeading park__previewHeading">Current Park</h2>
+                    <div class="preview park__preview"></div>
+                </section>
+                <section>
+                    <h2 class="previewHeading attraction_previewHeading">Current Attraction</h2>
+                    <div class="preview attraction__preview"></div>
+                </section>
+                    <h2 class="previewHeading eatery_previewHeading">Current Eatery</h2>
+                <div class="preview eatery__preview"></div>
             </div>
             <!-- container for Save Itinerary button  -->
-            <div class="saveItinerary"></div>
+            <div class="saveItinerary">
+                <h3>Save Current Itinerary:</h3>
+                <section></section>
+            </div>
         </article>
         <!-- container for all elements of Saved Itineraries -->
         <aside class="savedItineraries">
-            <h2 class="savedItineraries__heading">Your saved Itineraries:</h2>
+            <h2 class="savedItineraries__heading">Your Saved Itineraries:</h2>
             <section class="itineraryList"></section>
         </aside>
     </main>   
