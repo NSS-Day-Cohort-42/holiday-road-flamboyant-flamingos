@@ -14,5 +14,5 @@ parksSelect()
 getWeather()
     .then(() => {
         const weatherDataTest = useWeatherCopy()
-        // console.log(weatherDataTest)
+        console.log(weatherDataTest)
     })
