@@ -1,3 +1,6 @@
+import { getWeather } from "./WeatherProvider.js"
+
+
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector('.forecast')
 
@@ -14,7 +17,10 @@ const render = (forecastData) => {
                             } 
                             
 const Forecast = () => {
-    render()
+    getWeather()
+    .then( () => {
+        render()
+    })
 }
 
 
