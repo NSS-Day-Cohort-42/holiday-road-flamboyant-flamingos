@@ -9,6 +9,7 @@ const eventHub = document.querySelector(".container")
 eventHub.addEventListener("SaveButtonClicked", clickEvent => {
     debugger
         itinerariesSaved()
+        console.log("test", itinerariesSaved())
     }
 )
 
