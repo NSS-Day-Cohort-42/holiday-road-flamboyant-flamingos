@@ -8,14 +8,15 @@ body {
 .dropdown { 
     border-radius: 25rem;
     height: 2rem;
-    width: 18rem;
+    width: 25rem;
     text-align: center;
     text-align-last: center;
     border-color: lightgray;
-    margin-top: 4rem;
+    margin-top: 6rem;
     background-color: rgba(255,255,255,0.6);
     font-family: Indie Flower;
     font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -57,7 +58,7 @@ body {
 .destinationSelectorsBackground {
   
     background-image: url("../images/MomChildBackground.jpg");
-    height: 60vh;
+    height: 80vh;
     min-height: 100px;
     background-position: center;
     background-repeat: no-repeat;
@@ -67,8 +68,10 @@ body {
 
 .siteLogo { 
     display: flex;
-    justify-content: center;
+    align: center;
     height: 10rem;
     width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     
 }
