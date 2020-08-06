@@ -1,5 +1,3 @@
-import keyObj from "../Settings.js"
-
 let parks = []
 
 export const useParksCopy = () => {
@@ -7,9 +5,9 @@ export const useParksCopy = () => {
 }
 
 export const getParks = () => {
-    return fetch(`https://developer.nps.gov/api/v1/parks?api_key=${keyObj.npsKey}`)
+    return fetch('http://localhost:8088/data')
         .then(response => response.json())
         .then(parsedParks => {
-            parks = parsedParks.data
+            parks = parsedParks
         })
 }
