@@ -5,6 +5,7 @@ import { getWeather, useWeatherCopy } from "./weather/WeatherProvider.js";
 import "./parks/ParkItineraryPreview.js"
 import "./eateries/EateryItineraryPreview.js"
 import "./attractions/AttractionItineraryPreview.js"
+import "./weather/Forecast.js"
 
 EaterySelect()
 AttractionSelect()
