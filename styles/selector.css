@@ -1,4 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+body { 
+    margin: 0;
+}
+
+.dropdown { 
+    border-radius: 25rem;
+    height: 2rem;
+    width: 25rem;
+    text-align: center;
+    text-align-last: center;
+    border-color: lightgray;
+    margin-top: 6rem;
+    background-color: rgba(255,255,255,0.6);
+    font-family: Indie Flower;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.destinationSelectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    padding: 2px;
+}
+
+
 .attractions__selector { 
     display: flex; 
     justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.parks__selector { 
+    display: flex; 
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.eateries__selector { 
+    display: flex; 
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.selectorHeading { 
+    display: flex;
+    justify-content: center;
+}
+
+.destinationSelectorsBackground {
+  
+    background-image: url("../images/MomChildBackground.jpg");
+    height: 80vh;
+    min-height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1.5;
+}
+
+.siteLogo { 
+    display: flex;
+    align: center;
+    height: 10rem;
+    width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
 }

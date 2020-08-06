@@ -1,0 +1,22 @@
+.destinationPreviews { 
+    display: flex;
+    flex-direction: row;
+}
+
+.park__preview { 
+    margin-left: 6rem;
+    margin-right: 6rem;
+    padding: .25%;
+}
+
+.attraction__preview { 
+    margin-left: 6rem;
+    margin-right: 6rem;
+    padding: .25%
+}
+
+.eatery__preview {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    padding: .25%
+}
