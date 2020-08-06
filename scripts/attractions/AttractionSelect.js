@@ -1,6 +1,18 @@
 import { getAttractions, useAttractions } from "./AttractionProvider.js";
 
 const contentTarget = document.querySelector(".attractions__selector")
+const eventHub = document.querySelector(".container")
+
+contentTarget.addEventListener("change", (changeEvent) => {
+    if(changeEvent.target.id === "attractionSelect") {
+        const customEvent= new CustomEvent("attractionSelected", {
+            detail: {
+                name: changeEvent.target.value
+            }
+    })
+    eventHub.dispatchEvent(customEvent)
+    }
+})
 
 
 
@@ -20,7 +32,7 @@ export const AttractionSelect = () => {
                 ${
                     attractionCollection.map(
                         attractionObject => {
-                            return `<option value="${ attractionObject.id }">${attractionObject.name} - ${attractionObject.city}, ${attractionObject.state}</option>`
+                            return `<option value="${ attractionObject.name }">${attractionObject.name} - ${attractionObject.city}, ${attractionObject.state}</option>`
                         }
                     ).join("") 
                 }
