@@ -1,8 +1,13 @@
+body { 
+    margin: 0;
+}
+
+
 .destinationSelectors {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0;
+    margin: auto;
     padding: 2px;
 }
 
@@ -33,14 +38,14 @@
     justify-content: center;
 }
 
-.bg {
+.destinationSelectorsBackground {
   
-    /* background-image: url("../images/dailyjournal.jpg"); */
-    height: 30vh;
+    background-image: url("../images/MomChildBackground.jpg");
+    height: 60vh;
     min-height: 100px;
-    background-color: cornflowerblue;
-    background-position: center;
+    /* background-color: cornflowerblue; */
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.9;
+    opacity: 1.5;
 }
