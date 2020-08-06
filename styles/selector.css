@@ -68,7 +68,6 @@ body {
 
 .siteLogo { 
     display: flex;
-    align: center;
     height: 10rem;
     width: 10rem;
     margin-top: 1rem;
