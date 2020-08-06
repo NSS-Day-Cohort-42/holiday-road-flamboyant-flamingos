@@ -1,6 +1,6 @@
 import {useParksCopy, getParks} from "./ParkProvider.js"
 
-const contentTarget = document.querySelector(".parks__dropdown")
+const contentTarget = document.querySelector(".parks__selector")
 const eventHub = document.querySelector(".container")
 
 contentTarget.addEventListener("change", (changeEvent) => {

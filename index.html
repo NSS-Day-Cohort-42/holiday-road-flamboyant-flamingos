@@ -9,20 +9,29 @@
 <body>
     <!-- main content container -->
     <main class="container">
-        <!-- containter for all selection components -->
-        <article class="selectionsContainer"> 
-            <div class="parks__dropdown"></div>
-            <div class="attractions__dropdown"></div>
-            <div class="eateries__dropdown"></div>
+        <!-- containter for all Destination Selectors -->
+        <article class="destinationSelectors"> 
+            <h2 class="destinationSelectors__heading">Choose your Destinations:</h2>
+            <div class="selector parks__selector"></div>
+            <div class="selector attractions__selector"></div>
+            <div class="selector eateries__selector"></div>
         </article>
-        <!-- container for previewSection components -->
+        <!-- container for all elements of the Itinerary Preview -->
         <article class="itineraryPreview">
-            <section class="previewSection park__previewSection"></section>
-            <section class="previewSection attraction__previewSection"></section>
-            <section class="previewSection eatery__previewSection"></section>
+            <h2 class="itineraryPreview__heading">Preview and Save Your Trip:</h2>
+            <!-- container for all Destination Previews  -->
+            <div class="destinationPreviews">
+                <section class="preview park__preview"></section>
+                <section class="preview attraction__preview"></section>
+                <section class="preview eatery__preview"></section>
+            </div>
+            <!-- container for Save Itinerary button  -->
+            <div class="saveItinerary"></div>
         </article>
+        <!-- container for all elements of Saved Itineraries -->
         <aside class="savedItineraries">
-            <section>Itinerary Cards</section>
+            <h2 class="savedItineraries__heading">Your saved Itineraries:</h2>
+            <section class="itineraryList"></section>
         </aside>
     </main>   
     <script type="module" src="./scripts/main.js"></script>
