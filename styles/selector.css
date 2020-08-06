@@ -2,6 +2,15 @@ body {
     margin: 0;
 }
 
+.dropdown { 
+    border-radius: 25rem;
+    height: 2rem;
+    width: 15rem;
+    text-align: center;
+    text-align-last: center;
+    opacity: 5;
+    border-color: lightgray;
+}
 
 .destinationSelectors {
     display: flex;
@@ -43,8 +52,7 @@ body {
     background-image: url("../images/MomChildBackground.jpg");
     height: 60vh;
     min-height: 100px;
-    /* background-color: cornflowerblue; */
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 1.5;
