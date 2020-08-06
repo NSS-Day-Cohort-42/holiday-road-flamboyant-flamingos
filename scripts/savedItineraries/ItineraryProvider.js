@@ -18,7 +18,7 @@ export const saveItinerary = (itinerary) => {
       },
       body: jsonItinerary,
     })
-      .then(getPlayers)
+      .then(getItineraries)
       .then(dispatchStateChangeEvent)
   }
 
