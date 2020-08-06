@@ -1,6 +1,46 @@
+.destinationSelectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 2px;
+}
+
+
 .attractions__selector { 
     display: flex; 
     justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
-.
+.parks__selector { 
+    display: flex; 
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.eateries__selector { 
+    display: flex; 
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.selectorHeading { 
+    display: flex;
+    justify-content: center;
+}
+
+.bg {
+  
+    /* background-image: url("../images/dailyjournal.jpg"); */
+    height: 30vh;
+    min-height: 100px;
+    background-color: cornflowerblue;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
