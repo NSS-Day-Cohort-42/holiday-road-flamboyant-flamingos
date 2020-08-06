@@ -10,12 +10,12 @@ eventHub.addEventListener("parkSelected", () => {
 
 const render = (forecastData) => {
     contentTarget.innerHTML = `
-                            <section>
+                            <section class=">
                                 <h3 class="forecastHeading">5-day Forecast for this Park Destination</h3>
                                 ${
                                     forecastData.map(forecastObj => {
-                                        return forecastCard(forecastObj)
-                                    })
+                                        return `<div class="forecastCard">${forecastCard(forecastObj)}<div>`
+                                    }).join("")
                                 }
                                 </section>
                                 `
