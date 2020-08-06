@@ -5,7 +5,7 @@ const contentTarget = document.querySelector(".eateries__selector")
 const render = (eateriesCollection) => { 
     contentTarget.innerHTML = `
         <select class="dropdown" id="eaterySelect">
-            <option value="0">Please select an eatery...</option>
+            <option value="0">Eateries</option>
             ${
                 eateriesCollection.map(
                     eateryObj => {
