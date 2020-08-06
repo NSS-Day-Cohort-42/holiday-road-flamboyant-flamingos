@@ -7,7 +7,7 @@ export const useWeatherCopy = () => {
 }
 
 export const getWeather = () => {
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=Nashville&cnt=7&appid=${keyObj.weatherKey}`)
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=Nashville&appid=${keyObj.weatherKey}`)
         .then(response => response.json())
         .then(parsedWeather => {
             weather = parsedWeather.list

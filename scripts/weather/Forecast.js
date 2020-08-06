@@ -9,12 +9,23 @@ eventHub.addEventListener("parkSelected", () => {
 })
 
 const render = (forecastData) => {
+
+    const day1 = forecastData.slice(0, 7)
+    const day2 = forecastData.slice(8, 15)
+    const day3 = forecastData.slice(16, 23)
+    const day4 = forecastData.slice(24, 31)
+    const day5 = forecastData.slice(32, 39)
+    
+    const fiveDayForeCastArray = [day1, day2, day3, day4, day5]
+    console.log(fiveDayForeCastArray)
+
+
     contentTarget.innerHTML = `
                             <section>
                                 <h3 class="forecastHeading">5-day Forecast for this Park Destination</h3>
                                 ${
-                                    forecastData.map(forecastObj => {
-                                        return `<div class="forecastCard">${forecastCard(forecastObj)}<div>`
+                                    fiveDayForeCastArray.map(day => {
+                                        return `<div class="forecastCard">${forecastCard(day)}<div>`
                                     }).join("")
                                 }
                                 </section>
