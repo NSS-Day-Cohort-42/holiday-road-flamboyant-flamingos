@@ -1,5 +1,5 @@
-import { getWeather } from "./WeatherProvider.js"
-
+import { getWeather, useWeatherCopy } from "./WeatherProvider.js"
+import { forecastCard } from "./ForecastCard.js"
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector('.forecast')
@@ -12,6 +12,11 @@ const render = (forecastData) => {
     contentTarget.innerHTML = `
                             <section>
                                 <h3 class="forecastHeading">5-day Forecast for this Park Destination</h3>
+                                ${
+                                    forecastData.map(forecastObj => {
+                                        return forecastCard(forecastObj)
+                                    })
+                                }
                                 </section>
                                 `
                             } 
@@ -19,14 +24,10 @@ const render = (forecastData) => {
 const Forecast = () => {
     getWeather()
     .then( () => {
-        render()
+        const currentParkWeather = useWeatherCopy()
+        render(currentParkWeather)
     })
 }
 
 
                             
-                                        // ${
-                                        //     forecastData.map(forecastObj => {
-                                        //         return forecastCard(forecastObj)
-                                        //     })
-                                        // }
