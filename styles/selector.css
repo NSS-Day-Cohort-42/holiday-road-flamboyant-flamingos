@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 
 body { 
@@ -7,17 +8,17 @@ body {
 
 .dropdown { 
     border-radius: 25rem;
-    height: 2rem;
+    height: 2.5rem;
     width: 25rem;
     text-align: center;
     text-align-last: center;
     border-color: lightgray;
     margin-top: 6rem;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.8);
     font-family: Indie Flower;
     font-size: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    cursor: pointer;
 }
 
 .destinationSelectors {
@@ -34,6 +35,7 @@ body {
     justify-content: center;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-top: -2.7rem;
 }
 
 .parks__selector { 
@@ -41,6 +43,7 @@ body {
     justify-content: center;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-top: 8.9rem;
 }
 
 .eateries__selector { 
@@ -48,6 +51,7 @@ body {
     justify-content: center;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-top: 8.95rem;
 }
 
 .selectorHeading { 
@@ -57,7 +61,7 @@ body {
 
 .destinationSelectorsBackground {
   
-    background-image: url("../images/MomChildBackground.jpg");
+    background-image: url("../images/backgroundImages/MomChildBackground.jpg");
     height: 80vh;
     min-height: 100px;
     background-position: center;
@@ -68,10 +72,18 @@ body {
 
 .siteLogo { 
     display: flex;
-    align: center;
+    justify-content: center;
     height: 10rem;
     width: 10rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     
+}
+
+.siteTitle { 
+    font-family: 'Julius Sans One', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    letter-spacing: 15px;
 }
