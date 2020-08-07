@@ -23,7 +23,7 @@ eventHub.addEventListener("eaterySelected", changeEvent => {
 const render = (eatery) => {
     contentTarget.innerHTML = `
     <h3 class="previewHeading eatery__previewHeading">Current Eatery</h3>
-        <div class="eatery__name">${eatery.businessName}</div>
+        <div class="eatery__name" id = "currentEateryName">${eatery.businessName}</div>
         <button id="eateryDetailsButton--${eatery.id}"> Click for Details </button>
         <dialog class= "eateryDialog--${eatery.id}">
         <h4>${eatery.businessName}</h4>

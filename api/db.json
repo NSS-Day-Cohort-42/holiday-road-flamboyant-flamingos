@@ -1,3 +1,10 @@
 {
-	"itineraries": []
+  "itineraries": [
+    {
+      "parkName": "Camp Nelson",
+      "attractionName": "Largest Fork in the US",
+      "eateryName": "McClard's BBQ",
+      "id": 1
+    }
+  ]
 }

@@ -27,7 +27,7 @@ const render = (forecastData) => {
                                         return `<div class="forecastCard">${forecastCard(day)}<div>`
                                     }).join("")
                                 }
-                                </section>
+                                </div>
                                 `
                             } 
                             
