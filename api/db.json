@@ -5,6 +5,48 @@
       "attractionName": "World’s Largest ‘Gone With the Wind’ Collection",
       "eateryName": "Occidental Grill &amp; Seafood",
       "id": 1
+    },
+    {
+      "park": "Cuyahoga Valley",
+      "attraction": "Owney the Stuffed Dog Postal Mascot",
+      "eatery": "Buckhorn Exchange",
+      "id": 2
+    },
+    {
+      "park": "Cuyahoga Valley",
+      "attraction": "Owney the Stuffed Dog Postal Mascot",
+      "eatery": "Buckhorn Exchange",
+      "id": 3
+    },
+    {
+      "park": "Cuyahoga Valley",
+      "attraction": "Owney the Stuffed Dog Postal Mascot",
+      "eatery": "Buckhorn Exchange",
+      "id": 4
+    },
+    {
+      "park": "Cuyahoga Valley",
+      "attraction": "Grave of Marie Laveau, the Voodoo Queen",
+      "eatery": "Buckhorn Exchange",
+      "id": 5
+    },
+    {
+      "park": "Cape Cod",
+      "attraction": "Fountain of Youth",
+      "eatery": "Joe's Stone Crab",
+      "id": 6
+    },
+    {
+      "park": "Charles Pinckney",
+      "attraction": "Fountain of Youth",
+      "eatery": "Buckhorn Exchange",
+      "id": 7
+    },
+    {
+      "park": "Dry Tortugas",
+      "attraction": "Elvis Memorial Chapel",
+      "eatery": "The Old Clam House",
+      "id": 8
     }
   ]
 }

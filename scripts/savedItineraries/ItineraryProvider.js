@@ -3,6 +3,7 @@ let itineraries = []
 const eventHub = document.querySelector(".container")
 
 const dispatchStateChangeEvent = () => {
+  console.log(useItineraries())
   const itineraryStateChangedEvent = new CustomEvent("itineraryStateChanged")
 
   eventHub.dispatchEvent(itineraryStateChangedEvent)
