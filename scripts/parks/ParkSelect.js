@@ -5,9 +5,12 @@ const eventHub = document.querySelector(".container")
 
 contentTarget.addEventListener("change", (changeEvent) => {
     if(changeEvent.target.id === "parkSelect") {
-        const customEvent= new CustomEvent("parkSelected", {
+        const [parkName, parkZip] = changeEvent.target.value.split("--")
+        const customEvent = new CustomEvent("parkSelected", {
+          
             detail: {
-                name: changeEvent.target.value
+                name: parkName,
+                zip: parkZip
             }
     })
     eventHub.dispatchEvent(customEvent)
@@ -21,7 +24,7 @@ const render = parksCollection => {
         ${
             parksCollection.map(
                 parksObj => {
-                    return `<option value="${parksObj.name}"> ${parksObj.name}</option>`
+                    return `<option value="${parksObj.name}--${parksObj.addresses[0].postalCode}"> ${parksObj.name}</option>`
             }
          ).join("")
         }
