@@ -23,8 +23,8 @@
     margin-left: 6rem;
     margin-right: 6rem;
     padding: .25%;
-    border: 1px solid black;
-    border-radius: 25px;
+    /* border: 1px solid black;
+    border-radius: 25px; */
     font-family: 'Julius Sans One', sans-serif;
 }
 
@@ -32,8 +32,8 @@
     margin-left: 6rem;
     margin-right: 6rem;
     padding: .25%;
-    border: 1px solid black;
-    border-radius: 25px;
+    /* border: 1px solid black;
+    border-radius: 25px; */
     font-family: 'Julius Sans One', sans-serif;
 }
 
@@ -41,12 +41,114 @@
     margin-left: 6rem;
     margin-right: 6rem;
     padding: .25%;
-    border: 1px solid black;
-    border-radius: 25px;
+    /* border: 1px solid black;
+    border-radius: 25px; */
     font-family: 'Julius Sans One', sans-serif;
 }
 
 
 .forecast { 
     font-family: 'Julius Sans One', sans-serif;
+}
+
+#parkDetailsButton {
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+#parkDetailCloseButton {
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+#eateryDetailsButton { 
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+#eateryDetailCloseButton { 
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+#attractionDetailsButton { 
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+#attractionDetailCloseButton { 
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
 }
