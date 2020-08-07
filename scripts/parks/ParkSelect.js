@@ -8,9 +8,11 @@ contentTarget.addEventListener("change", (changeEvent) => {
     const customEvent = new CustomEvent("parkSelected", {
       detail: {
         name: changeEvent.target.value,
+        postalCode: changeEvent.target.value
       },
     });
     eventHub.dispatchEvent(customEvent);
+    console.log(customEvent.detail.postalCode)
   }
 });
 
@@ -20,7 +22,7 @@ const render = (parksCollection) => {
         <option value="0">Choose a National Park...</option>
         ${parksCollection
           .map((parksObj) => {
-            return `<option value="${parksObj.name}"> ${parksObj.name}</option>`;
+            return `<option value="${parksObj.addresses[0].postalCode}"> ${parksObj.name}</option>`;
           })
           .join("")}
     </select>

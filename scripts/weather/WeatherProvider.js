@@ -1,5 +1,13 @@
 import keyObj from "../Settings.js"
 
+let parkPostalCode
+
+const eventHub = document.querySelector(".container")
+eventHub.addEventListener("parkSelected", customEvent => {
+    parkPostalCode = customEvent.detail.postalCode
+    console.log(parkPostalCode)
+})
+
 let weather = []
 
 export const useWeatherCopy = () => {
