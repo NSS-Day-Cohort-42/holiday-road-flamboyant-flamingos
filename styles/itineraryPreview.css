@@ -1,22 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.itineraryPreview__heading { 
+    display: flex;
+    justify-content: center;
+    font-family: 'Julius Sans One', sans-serif;
+    letter-spacing: 10px;
+    font-size: 30px;
+}
+
 .destinationPreviews { 
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    
+}
+
+.previewHeading {
+    display: flex;
+    justify-content: center;
+}
+
+.park__name { 
+    display: flex;
+    justify-content: center;
+}
+
+.attraction__name { 
+    display: flex;
+    justify-content: center;
+}
+
+.eatery__name { 
+    display: flex;
+    justify-content: center;
 }
 
 .park__preview { 
     margin-left: 6rem;
     margin-right: 6rem;
     padding: .25%;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 250px;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .attraction__preview { 
     margin-left: 6rem;
     margin-right: 6rem;
-    padding: .25%
+    padding: .25%;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 250px;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .eatery__preview {
     margin-left: 6rem;
     margin-right: 6rem;
-    padding: .25%
+    padding: .25%;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 250px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+
+.forecast { 
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+#parkDetailsButton {
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+	text-decoration:none;
+    text-shadow:0px -1px 0px #2b665e;
+}
+
+#parkDetailCloseButton {
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+#eateryDetailsButton { 
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+#eateryDetailCloseButton { 
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+#attractionDetailsButton { 
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+#attractionDetailCloseButton { 
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Julius Sans One', sans-serif;
+	font-weight:bold;
+    padding: 5px 10px;
+    margin-top: 1rem;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+.forecast { 
+    display: flex;
+    justify-content: left;
+    margin-left: 20rem;
+}
+
+.forecastStylingCard { 
+    display: flex;
+    justify-content: center;
 }
