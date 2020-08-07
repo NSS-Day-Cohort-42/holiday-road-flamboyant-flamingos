@@ -4,7 +4,9 @@ let parkPostalCode
 
 const eventHub = document.querySelector(".container")
 eventHub.addEventListener("parkSelected", customEvent => {
-    parkPostalCode = parseInt(customEvent.detail.zip)
+    parkPostalCode = customEvent.detail.zip.substring(0, 5)
+    console.log(customEvent.detail.zip.substring(0, 5))
+    console.log(typeof parkPostalCode)
 })
 
 let weather = []
