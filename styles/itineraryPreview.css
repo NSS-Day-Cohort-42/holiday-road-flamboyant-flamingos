@@ -1,22 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.itineraryPreview__heading { 
+    display: flex;
+    justify-content: center;
+    font-family: 'Julius Sans One', sans-serif;
+    letter-spacing: 10px;
+    font-size: 30px;
+}
+
+
+
+
 .destinationPreviews { 
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    
 }
 
 .park__preview { 
     margin-left: 6rem;
     margin-right: 6rem;
     padding: .25%;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .attraction__preview { 
     margin-left: 6rem;
     margin-right: 6rem;
-    padding: .25%
+    padding: .25%;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .eatery__preview {
     margin-left: 6rem;
     margin-right: 6rem;
-    padding: .25%
+    padding: .25%;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+
+.forecast { 
+    font-family: 'Julius Sans One', sans-serif;
 }
