@@ -4,7 +4,7 @@ let parkPostalCode
 
 const eventHub = document.querySelector(".container")
 eventHub.addEventListener("parkSelected", customEvent => {
-    parkPostalCode = customEvent.detail.postalCode
+    parkPostalCode = customEvent.detail.zip
     console.log(parkPostalCode)
 })
 
