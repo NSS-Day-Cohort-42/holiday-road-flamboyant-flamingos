@@ -17,6 +17,12 @@
       "attractionName": "Ouija Board Inventor’s Tombstone",
       "eateryName": "Jack Fry's",
       "id": 3
+    },
+    {
+      "parkName": "Camp Nelson",
+      "attractionName": "Avery’s Beverages",
+      "eateryName": "Deer Park Tavern",
+      "id": 4
     }
   ]
 }
