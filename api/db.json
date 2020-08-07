@@ -1,5 +1,10 @@
 {
   "itineraries": [
-   
+    {
+      "parkName": "Effigy Mounds",
+      "attractionName": "Fountain of Youth",
+      "eateryName": "H&amp;H Soul Food",
+      "id": 1
+    }
   ]
 }
