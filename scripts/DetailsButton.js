@@ -32,3 +32,19 @@ export const attractionDetailsButton = () => {
     }
 })
 }
+
+export const eateryDetailsButton = () => {
+
+    eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("eateryDetailsButton--")) {
+        const eateryIdArray = clickEvent.target.id.split("--")[1]
+
+        const contentTarget = document.querySelector(`.eateryDialog--${eateryIdArray}`)
+        contentTarget.showModal()
+        }
+    else if (clickEvent.target.id === "eateryDetailCloseButton") {
+        const contentTarget = clickEvent.target.parentNode
+        contentTarget.close()
+    }
+})
+}
