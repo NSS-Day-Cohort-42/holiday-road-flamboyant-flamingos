@@ -5,6 +5,7 @@ import {useParksCopy, getParks} from "../parks/ParkProvider.js"
 const contentTarget = document.querySelector(".itineraryList")
 const eventHub = document.querySelector(".container")
 
+itinerary = []
 
 eventHub.addEventListener("SaveButtonClicked", clickEvent => {
         itinerariesSaved()
@@ -12,27 +13,29 @@ eventHub.addEventListener("SaveButtonClicked", clickEvent => {
     }
 )
 
-const render = (itineraryCollection) => {
-    contentTarget.innerHTML += `
-    <section id="showItineraries">
-        <section id="parkSaved">
-        ${
-            itineraryCollection.map(
-                parksObj => {
-                    return`<div value="${parksObj.name}"> ${parksObj.name}</div>`
-                    //add divs for the rest of the attractions and eateries
-                }
-                ).join("")
+eventHub.addEventListener("itineraryStateChanged", clickEvent => {
+    if (clickEvent.target.id === "showItineraries") {
+        var parkName = document.querySelector("#currentParkName").innerHTML
+        var attractionName = document.querySelector("#currentAttractionName").innerHTML
+        var eateryName = document.querySelector("#currentEateryName").innerHTML
+    
+        const newItinerary = {
+            park: parkName,
+            attraction: attractionName,
+            eatery: eateryName 
         }
-        </section>
-    <section>`
-}
+        render(newItinerary)      
+    }
 
-export const itinerariesSaved = () => {   
-    getParks().then(()=> {
-        const parks = useParksCopy()
+})
 
-        render(parks)
-    })
-}
-            
+const render = (itinerary) => {
+    itineraryTarget.innerHTML = `
+    <section id="entry--${itinerary.id}" class="journalEntry">
+        <div class="entry__date">${entry.date}</div>
+        <div class="entry__concept">${entry.concept}</div>
+        <div class="entry__concept">${entry.entry}</div>
+        <div class="entry__concept">${entry.mood}</div>
+    </section>
+    `
+}            

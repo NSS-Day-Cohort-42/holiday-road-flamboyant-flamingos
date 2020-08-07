@@ -7,6 +7,8 @@ import { saveItinerary } from "./ItineraryProvider.js"
 // import { AttractionSelect } from "../attractions/AttractionSelect.js";
 // import { EaterySelect } from "../eateries/EaterySelect.js";
 
+import { saveItinerary } from "./ItineraryProvider.js"
+
 // import { EaterySelect } from "../eateries/EaterySelect.js"
 
 
@@ -30,6 +32,7 @@ eventHub.addEventListener("change", (changeEvent) => {
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "showItineraries") {
+<<<<<<< HEAD
         const customEvent = new CustomEvent("SaveButtonClicked")
         eventHub.dispatchEvent(customEvent)
 
@@ -42,7 +45,20 @@ eventHub.addEventListener("click", clickEvent => {
 
         saveItinerary(newItinerary)
 
+=======
+        var parkName = document.querySelector("#currentParkName").innerHTML
+        var attractionName = document.querySelector("#currentAttractionName").innerHTML
+        var eateryName = document.querySelector("#currentEateryName").innerHTML
+    
+        const newItinerary = {
+            park: parkName,
+            attraction: attractionName,
+            eatery: eateryName 
+        }
+        saveItinerary(newItinerary)      
+>>>>>>> 575bd339336b40aaab2458bd529c82bda9b31473
     }
 })
+
 
 
