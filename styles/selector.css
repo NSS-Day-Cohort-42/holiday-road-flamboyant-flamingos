@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 
 body { 
@@ -80,7 +81,7 @@ body {
 }
 
 .siteTitle { 
-    font-family: Indie Flower;
+    font-family: 'Julius Sans One', sans-serif;
     display: flex;
     justify-content: center;
     font-size: 60px;
