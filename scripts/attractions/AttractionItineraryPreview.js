@@ -24,7 +24,7 @@ const render = (attraction) => {
     contentTarget.innerHTML = `
     <h3 class="previewHeading attraction__previewHeading">Current Attraction</h3>
         <div class="attraction__name" id = "currentAttractionName">${attraction.name}</div>
-        <button id="attractionDetails--${attraction.id}"> Click for Details </button>
+        <button class="attractionDetailsButton" id="attractionDetails--${attraction.id}"> Click for Details </button>
             <dialog class= "attractionDialog--${attraction.id}">
             <h4>${attraction.name}</h4>
             <div class="attraction__address"> ${attraction.city}, ${attraction.state} </div>
