@@ -16,6 +16,7 @@ eventHub.addEventListener("itineraryStateChanged", () => {
 })
 
 const render = (currentItineraryArray) => {
+    console.log(currentItineraryArray)
     contentTarget.innerHTML = `<h2>Your Saved Itineraries:</h2>
                             ${
                                 currentItineraryArray.map(itineraryObj => {

@@ -65,6 +65,18 @@
       "attraction": "Avery’s Beverages",
       "eatery": "Buckhorn Exchange",
       "id": 11
+    },
+    {
+      "park": "Camp Nelson",
+      "attraction": "Cabazon Dinosaurs",
+      "eatery": "McClard's BBQ",
+      "id": 12
+    },
+    {
+      "parkName": "Bryce Canyon",
+      "attractionName": "Avery’s Beverages",
+      "eateryName": "The Old Clam House",
+      "id": 13
     }
   ]
 }

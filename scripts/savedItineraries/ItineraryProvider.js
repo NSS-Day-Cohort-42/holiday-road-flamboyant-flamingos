@@ -3,7 +3,7 @@ let itineraries = []
 const eventHub = document.querySelector(".container")
 
 const dispatchStateChangeEvent = () => {
-  console.log(useItineraries())
+  console.log(useItineraries()) //IT ARRAY IS COMING BACK
   const itineraryStateChangedEvent = new CustomEvent("itineraryStateChanged")
 
   eventHub.dispatchEvent(itineraryStateChangedEvent)

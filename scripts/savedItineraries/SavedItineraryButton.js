@@ -34,9 +34,9 @@ eventHub.addEventListener("click", clickEvent => {
         var eateryName = document.querySelector("#currentEateryName").innerHTML
     
         const newItinerary = {
-            park: parkName,
-            attraction: attractionName,
-            eatery: eateryName 
+            parkName: parkName,
+            attractionName: attractionName,
+            eateryName: eateryName 
         }
         saveItinerary(newItinerary)      
     }
