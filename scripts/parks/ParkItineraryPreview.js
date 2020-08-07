@@ -33,7 +33,7 @@ const render = (park) => {
                             if(addressObj.type === "Physical"){
                             return `
                             <h5>Address: </h5>
-                            <div class="park__address">${addressObj.line1} ${addressObj.city}, ${addressObj.stateCode} ${addressObj.postalCode}`
+                            <div class="park__address">${addressObj.line1} ${addressObj.city}, ${addressObj.stateCode} ${addressObj.postalCode}</div>`
                             }
                         }
                     ).join("")
@@ -69,8 +69,8 @@ const render = (park) => {
                 }
                 <h5>Park Site</h5>
                 <div class="park__url"><a target=_blank href="${park.url}">Cuyahoga Valley Website</a></div>
-            <br></br>
-            <button id="parkDetailCloseButton">Close</button>
+        <br></br>
+        <button id="parkDetailCloseButton">Close</button>
         </dialog>
     `
 }

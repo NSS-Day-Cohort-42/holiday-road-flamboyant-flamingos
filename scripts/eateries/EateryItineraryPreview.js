@@ -36,7 +36,7 @@ const render = (eatery) => {
             <div class ="eatery__diaperFacility">Diaper Facility: ${amenetiesDiaperFacility()} </div>
             
             <br></br>
-            <button id"eateryDetailCloseButton">Close</button>
+            <button id="eateryDetailCloseButton">Close</button>
         </dialog>
     `
 }

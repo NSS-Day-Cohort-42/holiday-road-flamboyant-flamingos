@@ -11,6 +11,7 @@ export const parkDetailsButton = () => {
         }
     else if (clickEvent.target.id ==="parkDetailCloseButton") {
         const contentTarget = clickEvent.target.parentNode
+        console.log(contentTarget)
         contentTarget.close()
     }
 })

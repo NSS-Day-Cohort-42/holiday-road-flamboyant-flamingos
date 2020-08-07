@@ -35,7 +35,7 @@ const render = (attraction) => {
             <div class ="attraction__souvenirs">Souvenirs: ${amenetiesSouvenirs()} </div>
             
             <br></br>
-            <button id"attractionDetailCloseButton">Close</button>
+            <button id="attractionDetailCloseButton">Close</button>
             </dialog>
     `
 }
