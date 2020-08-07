@@ -1,4 +1,5 @@
 import { getItineraries, useItineraries } from "./ItineraryProvider.js"
+import { itinerary } from "./Itinerary.js"
 
 const contentTarget = document.querySelector(".itineraryList")
 const eventHub = document.querySelector(".container")
@@ -14,16 +15,19 @@ eventHub.addEventListener("itineraryStateChanged", () => {
     ItineraryList()
 })
 
-const render = (itinerary) => {
-    contentTarget.innerHTML = `<H
-
-
+const render = (currentItineraryArray) => {
+    contentTarget.innerHTML = `<h2>Your Saved Itineraries:</h2>
+                            ${
+                                currentItineraryArray.map(itineraryObj => {
+                                    return itinerary(itineraryObj)
+                                })
+                            }
     `
 }
 
 const ItineraryList = () => {
     getItineraries()
-        .then(() =>{
+        .then(() => {
             const itineraryArray = useItineraries()
             render(itineraryArray)
         })

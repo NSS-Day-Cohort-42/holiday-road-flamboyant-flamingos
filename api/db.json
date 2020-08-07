@@ -47,6 +47,24 @@
       "attraction": "Elvis Memorial Chapel",
       "eatery": "The Old Clam House",
       "id": 8
+    },
+    {
+      "park": "Camp Nelson",
+      "attraction": "Owney the Stuffed Dog Postal Mascot",
+      "eatery": "The Old Clam House",
+      "id": 9
+    },
+    {
+      "park": "Bryce Canyon",
+      "attraction": "Elvis Memorial Chapel",
+      "eatery": "McClard's BBQ",
+      "id": 10
+    },
+    {
+      "park": "Dry Tortugas",
+      "attraction": "Avery’s Beverages",
+      "eatery": "Buckhorn Exchange",
+      "id": 11
     }
   ]
 }
