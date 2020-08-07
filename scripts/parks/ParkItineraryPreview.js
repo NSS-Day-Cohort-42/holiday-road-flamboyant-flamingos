@@ -45,7 +45,7 @@ const render = (park) => {
                         hoursObj => {
                             return `
                             <h5> Hours: </h5>
-
+                            
                             <div class="hours--monday">Monday: ${hoursObj.standardHours.monday}</div>
                             <div class="hours--tuesday">Tuesday: ${hoursObj.standardHours.tuesday}</div>
                             <div class="hours--wednesday">Wednesday: ${hoursObj.standardHours.wednesday}</div>

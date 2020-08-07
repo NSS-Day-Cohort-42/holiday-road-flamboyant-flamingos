@@ -43,23 +43,23 @@ const render = (eatery) => {
 
 export const amenetiesPlayground = () => {
     if(amenetiesPlayground.playground === true){
-        return "yes"
+        return "Yes"
     } else {
-        return"no"
+        return"No"
     }   
 }
 
 export const amenetiesRestrooms = () =>{
     if(amenetiesRestrooms.restrooms === true){
-    return "yes"
+    return "Yes"
 } else {
-    return"no"
+    return"No"
     }   
 }
 export const amenetiesDiaperFacility = () =>{
     if(amenetiesDiaperFacility.diaperFacility === true){
-    return "yes"
+    return "Yes"
 } else {
-    return"no"
+    return"No"
     }   
 }

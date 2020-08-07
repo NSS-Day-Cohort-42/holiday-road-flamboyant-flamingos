@@ -42,16 +42,16 @@ const render = (attraction) => {
 
 export const amenetiesSouvenirs = () => {
     if(amenetiesSouvenirs.souvenirs === true){
-        return "yes"
+        return "Yes"
     } else {
-        return"no"
+        return"No"
     }   
 }
 
 export const amenetiesRestrooms = () =>{
     if(amenetiesRestrooms.restrooms === true){
-    return "yes"
+    return "Yes"
 } else {
-    return"no"
+    return"No"
 }   
 }
