@@ -1,3 +1,16 @@
 {
-	"itineraries": []
+  "itineraries": [
+    {
+      "id": 1,
+      "parkName": "",
+      "attractionName": "",
+      "eateryName": ""
+    },
+    {
+      "park": "Cape Cod",
+      "attraction": "Elvis Memorial Chapel",
+      "eatery": "El Charro Cafe",
+      "id": 2
+    }
+  ]
 }
