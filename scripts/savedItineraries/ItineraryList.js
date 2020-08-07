@@ -5,7 +5,6 @@ import {useParksCopy, getParks} from "../parks/ParkProvider.js"
 const contentTarget = document.querySelector(".itineraryList")
 const eventHub = document.querySelector(".container")
 
-itinerary = []
 
 eventHub.addEventListener("SaveButtonClicked", clickEvent => {
         itinerariesSaved()
