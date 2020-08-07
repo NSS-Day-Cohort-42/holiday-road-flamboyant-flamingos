@@ -14,14 +14,14 @@ eventHub.addEventListener("SaveButtonClicked", clickEvent => {
 )
 
 const render = (itineraryCollection) => {
-    debugger
     contentTarget.innerHTML += `
     <section id="showItineraries">
         <section id="parkSaved">
         ${
             itineraryCollection.map(
                 parksObj => {
-                    return `<option value="${parksObj.name}"> ${parksObj.name}</option>`
+                    return`<div value="${parksObj.name}"> ${parksObj.name}</div>`
+                    //add divs for the rest of the attractions and eateries
                 }
                 ).join("")
         }
@@ -35,5 +35,5 @@ export const itinerariesSaved = () => {
 
         render(parks)
     })
-            }
+}
             
