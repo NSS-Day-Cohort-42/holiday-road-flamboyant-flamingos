@@ -7,7 +7,6 @@ const eventHub = document.querySelector(".container")
 
 
 eventHub.addEventListener("SaveButtonClicked", clickEvent => {
-    debugger
         itinerariesSaved()
         console.log("test", itinerariesSaved())
     }
@@ -15,7 +14,7 @@ eventHub.addEventListener("SaveButtonClicked", clickEvent => {
 
 const render = (itineraryCollection) => {
     contentTarget.innerHTML += `
-    <section id="showItineraries">
+    <section id="showItineraries">SOME STUFFF TO TEST
         <section id="parkSaved">
         ${
             itineraryCollection.map(

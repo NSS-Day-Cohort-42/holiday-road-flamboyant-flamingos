@@ -24,10 +24,22 @@ eventHub.addEventListener("change", (changeEvent) => {
     }
 })
 
+
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "showItineraries") {
         const customEvent = new CustomEvent("SaveButtonClicked")
         eventHub.dispatchEvent(customEvent)
+
+
+        const newItinerary = {
+            parkName: document.querySelector("#currentParkName").innerHTML,
+            attractionName: document.querySelector("#currentAttractionName").innerHTML,
+            eateryName: document.querySelector("#currentEateryName").innerHTML
+
+
+        }
+
+        console.log(newItinerary)
     }
 })
 
