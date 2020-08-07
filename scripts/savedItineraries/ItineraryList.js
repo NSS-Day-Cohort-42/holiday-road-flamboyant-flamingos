@@ -5,18 +5,11 @@ const contentTarget = document.querySelector(".itineraryList")
 const eventHub = document.querySelector(".container")
 
 
-// eventHub.addEventListener("SaveButtonClicked", clickEvent => {
-//         itinerariesSaved()
-//         console.log("test", itinerariesSaved())
-//     }
-
-
 eventHub.addEventListener("itineraryStateChanged", () => {
     ItineraryList()
 })
 
 const render = (currentItineraryArray) => {
-    console.log(currentItineraryArray)
     contentTarget.innerHTML = `
                             ${
                                 currentItineraryArray.map(itineraryObj => {
