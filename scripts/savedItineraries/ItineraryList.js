@@ -17,16 +17,16 @@ eventHub.addEventListener("itineraryStateChanged", () => {
 
 const render = (currentItineraryArray) => {
     console.log(currentItineraryArray)
-    contentTarget.innerHTML = `<h2>Your Saved Itineraries:</h2>
+    contentTarget.innerHTML = `
                             ${
                                 currentItineraryArray.map(itineraryObj => {
                                     return itinerary(itineraryObj)
-                                })
+                                }).reverse().join("")
                             }
     `
 }
 
-const ItineraryList = () => {
+export const ItineraryList = () => {
     getItineraries()
         .then(() => {
             const itineraryArray = useItineraries()

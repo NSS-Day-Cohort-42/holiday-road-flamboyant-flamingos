@@ -77,6 +77,30 @@
       "attractionName": "Avery’s Beverages",
       "eateryName": "The Old Clam House",
       "id": 13
+    },
+    {
+      "parkName": "Charles Pinckney",
+      "attractionName": "Avery’s Beverages",
+      "eateryName": "The Old Clam House",
+      "id": 14
+    },
+    {
+      "parkName": "El Malpais",
+      "attractionName": "Cabazon Dinosaurs",
+      "eateryName": "Hy's Steak House",
+      "id": 15
+    },
+    {
+      "parkName": "Camp Nelson",
+      "attractionName": "Largest Fork in the US",
+      "eateryName": "Occidental Grill &amp; Seafood",
+      "id": 16
+    },
+    {
+      "parkName": "Effigy Mounds",
+      "attractionName": "World’s Most Scenic Urinal",
+      "eateryName": "Northwestern Steakhouse",
+      "id": 17
     }
   ]
 }
