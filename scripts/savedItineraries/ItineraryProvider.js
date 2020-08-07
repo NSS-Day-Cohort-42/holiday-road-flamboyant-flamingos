@@ -11,7 +11,7 @@ const dispatchStateChangeEvent = () => {
 export const saveItinerary = (itinerary) => {
     const jsonItinerary = JSON.stringify(itinerary)
   
-    return fetch("http://localhost:8088/itineraries", {
+    return fetch("http://localhost:8000/itineraries", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,7 +27,7 @@ export const saveItinerary = (itinerary) => {
   }
   
   export const getItineraries = () => {
-    return fetch("http://localhost:8088/itineraries")
+    return fetch("http://localhost:8000/itineraries")
       .then((response) => response.json())
       .then((itinerariesArray) => {
         itineraries = itinerariesArray

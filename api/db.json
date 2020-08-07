@@ -1,3 +1,10 @@
 {
-	"itineraries": []
+  "itineraries": [
+    {
+      "parkName": "Cuyahoga Valley",
+      "attractionName": "World’s Largest ‘Gone With the Wind’ Collection",
+      "eateryName": "Occidental Grill &amp; Seafood",
+      "id": 1
+    }
+  ]
 }

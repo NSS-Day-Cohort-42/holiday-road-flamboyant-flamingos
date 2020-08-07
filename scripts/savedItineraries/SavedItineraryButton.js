@@ -1,3 +1,5 @@
+import { saveItinerary } from "./ItineraryProvider.js"
+
 // import {useParksCopy, getParks} from "./ParkProvider.js"
 // import { getAttractions, useAttractions } from "./AttractionProvider.js";
 // import { useEateries, getEateries } from "./EateryProvider.js";
@@ -6,6 +8,7 @@
 // import { EaterySelect } from "../eateries/EaterySelect.js";
 
 // import { EaterySelect } from "../eateries/EaterySelect.js"
+
 
 
 const contentTarget = document.querySelector(".saveButton")
@@ -37,7 +40,8 @@ eventHub.addEventListener("click", clickEvent => {
             eateryName: document.querySelector("#currentEateryName").innerHTML
         }
 
-        console.log(newItinerary)
+        saveItinerary(newItinerary)
+
     }
 })
 
