@@ -1,38 +1,38 @@
-import { useParksCopy, getParks } from "./ParkProvider.js";
+import {useParksCopy, getParks} from "./ParkProvider.js"
 
-const contentTarget = document.querySelector(".parks__selector");
-const eventHub = document.querySelector(".container");
+const contentTarget = document.querySelector(".parks__selector")
+const eventHub = document.querySelector(".container")
 
 contentTarget.addEventListener("change", (changeEvent) => {
-  if (changeEvent.target.id === "parkSelect") {
-    const customEvent = new CustomEvent("parkSelected", {
-      detail: {
-        name: changeEvent.target.value,
-        postalCode: changeEvent.target.value
-      },
-    });
-    eventHub.dispatchEvent(customEvent);
-    console.log(customEvent.detail.postalCode)
-  }
-});
+    if(changeEvent.target.id === "parkSelect") {
+        const customEvent= new CustomEvent("parkSelected", {
+            detail: {
+                name: changeEvent.target.value
+            }
+    })
+    eventHub.dispatchEvent(customEvent)
+    }
+})
 
-const render = (parksCollection) => {
-  contentTarget.innerHTML = `
+const render = parksCollection => {
+    contentTarget.innerHTML = `
     <select class= "dropdown" id="parkSelect">
-        <option value="0">Choose a National Park...</option>
-        ${parksCollection
-          .map((parksObj) => {
-            return `<option value="${parksObj.addresses[0].postalCode}"> ${parksObj.name}</option>`;
-          })
-          .join("")}
+        <option vlaue- "0">National Parks</option>
+        ${
+            parksCollection.map(
+                parksObj => {
+                    return `<option value="${parksObj.name}"> ${parksObj.name}</option>`
+            }
+         ).join("")
+        }
     </select>
-    `;
-};
+    `
+}
 
 export const parksSelect = () => {
-  getParks().then(() => {
-    const parks = useParksCopy();
+    getParks().then(()=> {
+        const parks = useParksCopy()
 
-    render(parks);
-  });
-};
+        render(parks)
+    })
+}
