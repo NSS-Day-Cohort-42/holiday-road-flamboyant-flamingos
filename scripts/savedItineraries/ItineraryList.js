@@ -14,7 +14,7 @@ eventHub.addEventListener("SaveButtonClicked", clickEvent => {
 
 const render = (itineraryCollection) => {
     contentTarget.innerHTML += `
-    <section id="showItineraries">SOME STUFFF TO TEST
+    <section id="showItineraries">
         <section id="parkSaved">
         ${
             itineraryCollection.map(
