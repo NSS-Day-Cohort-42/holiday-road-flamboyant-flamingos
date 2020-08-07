@@ -61,7 +61,7 @@ body {
 
 .destinationSelectorsBackground {
   
-    background-image: url("../images/MomChildBackground.jpg");
+    background-image: url("../images/backgroundImages/MomChildBackground.jpg");
     height: 80vh;
     min-height: 100px;
     background-position: center;
