@@ -1,5 +1,22 @@
 {
   "itineraries": [
-
+    {
+      "parkName": "Parashant",
+      "attractionName": "White House Replica",
+      "eateryName": "H&amp;H Soul Food",
+      "id": 1
+    },
+    {
+      "parkName": "Motor Cities",
+      "attractionName": "Ouija Board Inventor’s Tombstone",
+      "eateryName": "Jack Fry's",
+      "id": 2
+    },
+    {
+      "parkName": "Motor Cities",
+      "attractionName": "Ouija Board Inventor’s Tombstone",
+      "eateryName": "Jack Fry's",
+      "id": 3
+    }
   ]
 }
