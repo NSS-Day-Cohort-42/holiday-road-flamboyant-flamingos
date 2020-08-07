@@ -35,8 +35,6 @@ eventHub.addEventListener("click", clickEvent => {
             parkName: document.querySelector("#currentParkName").innerHTML,
             attractionName: document.querySelector("#currentAttractionName").innerHTML,
             eateryName: document.querySelector("#currentEateryName").innerHTML
-
-
         }
 
         console.log(newItinerary)
