@@ -1,5 +1,5 @@
 import {useParksCopy, getParks} from "./ParkProvider.js"
-import {detailsButton} from "../DetailsButton.js"
+import {parkDetailsButton} from "../DetailsButton.js"
 
 const contentTarget = document.querySelector(".park__preview")
 const eventHub = document.querySelector(".container")
@@ -16,7 +16,7 @@ eventHub.addEventListener("parkSelected", changeEvent => {
     )
     render(foundParkObj)
 })
-    .then(detailsButton)
+    .then(parkDetailsButton)
 })
 
 
