@@ -74,3 +74,9 @@ body {
     margin-bottom: 1rem;
     
 }
+
+.siteTitle { 
+    font-family: Indie Flower;
+    display: flex;
+    justify-content: center;
+}
