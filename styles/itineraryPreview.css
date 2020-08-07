@@ -21,13 +21,28 @@
     justify-content: center;
 }
 
+.park__name { 
+    display: flex;
+    justify-content: center;
+}
+
+.attraction__name { 
+    display: flex;
+    justify-content: center;
+}
+
+.eatery__name { 
+    display: flex;
+    justify-content: center;
+}
+
 .park__preview { 
     margin-left: 6rem;
     margin-right: 6rem;
     padding: .25%;
     border: 1px solid black;
     border-radius: 25px;
-    width: 225px;
+    width: 250px;
     font-family: 'Julius Sans One', sans-serif;
 }
 
@@ -37,7 +52,7 @@
     padding: .25%;
     border: 1px solid black;
     border-radius: 25px;
-    width: 225px;
+    width: 250px;
     font-family: 'Julius Sans One', sans-serif;
 }
 
@@ -47,7 +62,7 @@
     padding: .25%;
     border: 1px solid black;
     border-radius: 25px;
-    width: 225px;
+    width: 250px;
     font-family: 'Julius Sans One', sans-serif;
 }
 
@@ -62,15 +77,16 @@
 	background-color:#768d87;
 	border-radius:5px;
 	border:1px solid #566963;
-	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:'Julius Sans One', sans-serif;
 	font-weight:bold;
     padding: 5px 10px;
     margin-top: 1rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
 	text-decoration:none;
-	text-shadow:0px -1px 0px #2b665e;
+    text-shadow:0px -1px 0px #2b665e;
 }
 
 #parkDetailCloseButton {
@@ -103,6 +119,8 @@
 	font-weight:bold;
     padding: 5px 10px;
     margin-top: 1rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #2b665e;
 }
@@ -137,6 +155,8 @@
 	font-weight:bold;
     padding: 5px 10px;
     margin-top: 1rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #2b665e;
 }
@@ -158,3 +178,13 @@
 	text-shadow:0px -1px 0px #2b665e;
 }
 
+.forecast { 
+    display: flex;
+    justify-content: left;
+    margin-left: 20rem;
+}
+
+.forecastStylingCard { 
+    display: flex;
+    justify-content: center;
+}
