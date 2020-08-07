@@ -4,8 +4,7 @@ let parkPostalCode
 
 const eventHub = document.querySelector(".container")
 eventHub.addEventListener("parkSelected", customEvent => {
-    parkPostalCode = customEvent.detail.zip
-    console.log(parkPostalCode)
+    parkPostalCode = parseInt(customEvent.detail.zip)
 })
 
 let weather = []
@@ -15,7 +14,7 @@ export const useWeatherCopy = () => {
 }
 
 export const getWeather = () => {
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=Nashville&appid=${keyObj.weatherKey}`)
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${parkPostalCode}&appid=${keyObj.weatherKey}`)
         .then(response => response.json())
         .then(parsedWeather => {
             weather = parsedWeather.list

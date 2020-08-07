@@ -12,8 +12,8 @@ AttractionSelect()
 parksSelect()
 
 
-getWeather()
-    .then(() => {
-        const weatherDataTest = useWeatherCopy()
-        console.log(weatherDataTest)
-    })
+// getWeather()
+//     .then(() => {
+//         const weatherDataTest = useWeatherCopy()
+//         console.log(weatherDataTest)
+//     })
