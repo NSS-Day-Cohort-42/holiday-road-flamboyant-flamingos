@@ -19,6 +19,7 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
     getCoordinates()
     .then(() => {
         const coordinateTest = useCoordinateCopy()
+        console.log(coordinateTest)
     })
     
     getDirections()
@@ -33,9 +34,6 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
         
         console.log(routeArray[0].instructions)
     })
-
-
-
     
 })
 
@@ -62,6 +60,7 @@ export const getDirections = () => {
 
 
 let coordinateData = []
+
 export const getCoordinates = () => {
     return fetch(`https://graphhopper.com/api/1/geocode?q=${testLocationName}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
     .then(response => response.json())
