@@ -9,7 +9,7 @@ import "./eateries/EateryItineraryPreview.js"
 import "./attractions/AttractionItineraryPreview.js"
 import "./weather/Forecast.js"
 import "./directions/ItiniraryDirections.js"
-import { getDirections, useRouteDataCopy } from "./directions/DirectionProvider.js";
+import "./directions/DirectionProvider.js";
 import "./directions/DirectionProvider.js"
 
 EaterySelect()
