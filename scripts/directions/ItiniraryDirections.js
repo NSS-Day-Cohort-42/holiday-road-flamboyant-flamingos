@@ -2,6 +2,8 @@ import { getParks, useParksCopy} from "../parks/ParkProvider.js"
 
 const eventHub = document.querySelector(".container")
 
+
+
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.className === "getDirections") {
         const [prefix, directionsParkName, directionsAttractionName, directionsEateryName] = clickEvent.target.parentNode.id.split("--")
@@ -17,10 +19,15 @@ eventHub.addEventListener("click", clickEvent => {
                 const matchingParkLat = matchingPark.latitude
                 const matchingParkLong = matchingPark.longitude
 
-                console.log(matchingParkLat)
-                console.log(matchingParkLong)
+                const getDirectionsButtonEvent = new CustomEvent ("getDirectionsButtonPressed", {
+                    detail: {
+                        parkLat: matchingParkLat,
+                        parkLong: matchingParkLong
+                    }
+                })
 
-                
+                eventHub.dispatchEvent(getDirectionsButtonEvent)
+                console.log(getDirectionsButtonEvent)
 
             })
             
