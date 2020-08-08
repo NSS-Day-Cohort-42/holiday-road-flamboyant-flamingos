@@ -2,17 +2,24 @@ const contentTarget = document.getElementById("directionsContainer")
 import keyObj from "../Settings.js"
 
 let currentParkCoordinates
+let currentTestCoordinates
+
 let testLocationName
 
 const eventHub = document.querySelector(".container")
 eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
     const currentParkLat = parseFloat(customEvent.detail.parkLat)
     const currentParkLong = parseFloat(customEvent.detail.parkLong)
-    
+
+    console.log(customEvent.detail.attractionName)
     currentParkCoordinates = `${currentParkLat},${currentParkLong}`
     
     testLocationName = `yosemite+national+park`
     
+    getCoordinates()
+    .then(() => {
+        const coordinateTest = useCoordinateCopy()
+    })
     
     getDirections()
     .then(()=> {
@@ -27,11 +34,6 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
         console.log(routeArray[0].instructions)
     })
 
-    getCoordinates()
-    .then(() => {
-        const coordinateTest = useCoordinateCopy()
-        console.log(coordinateTest)
-    })
 
 
     
