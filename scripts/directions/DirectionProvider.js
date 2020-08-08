@@ -1,13 +1,14 @@
 const contentTarget = document.getElementById("directionsContainer")
 import keyObj from "../Settings.js"
 
-let currentCoordinates
+let currentParkCoordinates
 
 const eventHub = document.querySelector(".container")
 eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
     const currentParkLat = parseFloat(customEvent.detail.parkLat)
     const currentParkLong = parseFloat(customEvent.detail.parkLong)
-    currentCoordinates = `${currentParkLat},${currentParkLong}`
+
+    currentParkCoordinates = `${currentParkLat},${currentParkLong}`
 
 
     getDirections()
@@ -36,7 +37,7 @@ export const useRouteDataCopy = () => {
 }
 
 export const getDirections = () => {
-    return fetch(`https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`)
+    return fetch(`https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentParkCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`)
         .then(response => response.json())
         .then(parsedRouteData => {
             routeData = parsedRouteData.paths
