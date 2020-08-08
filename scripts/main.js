@@ -9,9 +9,15 @@ import "./eateries/EateryItineraryPreview.js"
 import "./attractions/AttractionItineraryPreview.js"
 import "./weather/Forecast.js"
 import "./directions/ItiniraryDirections.js"
+import { getDirections, useRouteDataCopy } from "./directions/DirectionProvider.js";
 
 EaterySelect()
 AttractionSelect()
 parksSelect()
 ItineraryList()
 
+getDirections()
+        .then(()=> {
+            const routeArray = useRouteDataCopy()
+            console.log(routeArray)
+        })
