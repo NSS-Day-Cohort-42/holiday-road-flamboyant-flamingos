@@ -27,7 +27,6 @@ eventHub.addEventListener("click", clickEvent => {
                 })
 
                 eventHub.dispatchEvent(getDirectionsButtonEvent)
-                console.log(getDirectionsButtonEvent)
 
             })
             

@@ -1,5 +1,17 @@
 import keyObj from "../Settings.js"
 
+let currentParkLong
+let currentParkLat
+
+const eventHub = document.querySelector(".container")
+eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
+    currentParkLat = parseFloat(customEvent.detail.parkLat)
+    currentParkLong = parseFloat(customEvent.detail.parkLong)
+    console.log(currentParkLong)
+    console.log(currentParkLat)
+
+})
+
 
 let routeData = []
 const nashvilleCoordinates = `36.174465,-86.767960`
