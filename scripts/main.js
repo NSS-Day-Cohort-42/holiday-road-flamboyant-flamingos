@@ -8,7 +8,7 @@ import "./parks/ParkItineraryPreview.js"
 import "./eateries/EateryItineraryPreview.js"
 import "./attractions/AttractionItineraryPreview.js"
 import "./weather/Forecast.js"
-import "./savedItineraries/ItiniraryDirections.js"
+import "./directions/ItiniraryDirections.js"
 
 EaterySelect()
 AttractionSelect()

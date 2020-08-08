@@ -23,6 +23,18 @@
       "attractionName": "Avery’s Beverages",
       "eateryName": "Deer Park Tavern",
       "id": 4
+    },
+    {
+      "parkName": "Bryce Canyon",
+      "attractionName": "Snake World",
+      "eateryName": "Deer Park Tavern",
+      "id": 5
+    },
+    {
+      "parkName": "Camp Nelson",
+      "attractionName": "Fountain of Youth",
+      "eateryName": "H&amp;H Soul Food",
+      "id": 6
     }
   ]
 }
