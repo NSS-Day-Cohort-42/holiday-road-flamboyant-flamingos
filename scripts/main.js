@@ -16,8 +16,3 @@ AttractionSelect()
 parksSelect()
 ItineraryList()
 
-getDirections()
-        .then(()=> {
-            const routeArray = useRouteDataCopy()
-            console.log(routeArray)
-        })
