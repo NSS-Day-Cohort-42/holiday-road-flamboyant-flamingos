@@ -1,3 +1,4 @@
+const contentTarget = document.getElementById("directionsContainer")
 import keyObj from "../Settings.js"
 
 let currentCoordinates
@@ -7,13 +8,24 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
     const currentParkLat = parseFloat(customEvent.detail.parkLat)
     const currentParkLong = parseFloat(customEvent.detail.parkLong)
     currentCoordinates = `${currentParkLat},${currentParkLong}`
+
+
     getDirections()
         .then(()=> {
             const routeArray = useRouteDataCopy()
-            console.log(routeArray)
+            const arrayOfDirections = routeArray[0].instructions
+            contentTarget.innerHTML = `${
+                arrayOfDirections.map(directionObject => {
+                    return directionObject.text
+                })
+            }`
+
+            console.log(routeArray[0].instructions)
         })
 
 })
+
+
 
 
 let routeData = []
