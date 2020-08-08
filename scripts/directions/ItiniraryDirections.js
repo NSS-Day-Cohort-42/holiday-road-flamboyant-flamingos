@@ -17,56 +17,68 @@ eventHub.addEventListener("click", (clickEvent) => {
     ] = clickEvent.target.parentNode.id.split("--");
 
     getEateries()
-        .then(() => {
-      getAttractions()
-        .then(() => {
-          const attractionsArray = useAttractions();
-          const matchingAttraction = attractionsArray.find((attractionObj) => {
-            return attractionObj.name === directionsAttractionName;
-          });
-
-          const attractionLocation =
-            matchingAttraction.city + matchingAttraction.state;
-          console.log(attractionLocation);
-          return attractionLocation;
-        })
-        .then(() => {
-          getParks().then(() => {
-            const parksArray = useParksCopy();
-
-            const matchingPark = parksArray.find((parkObj) => {
-              return parkObj.name === directionsParkName;
-            });
-
-            const matchingParkLat = matchingPark.latitude;
-            const matchingParkLong = matchingPark.longitude;
-
-            const getDirectionsButtonEvent = new CustomEvent(
-              "getDirectionsButtonPressed",
-              {
-                detail: {
-                  parkLat: matchingParkLat,
-                  parkLong: matchingParkLong,
-                  attractionName: directionsAttractionName,
-                  eateryName: directionsEateryName,
-                },
+      .then(() => {
+        const eateriesArray = useEateries()
+        const matchingEatery = eateriesArray.find(
+            eateryObj => {
+                return eateryObj.businessName === directionsEateryName
+            }
+        )
+        
+        console.log(matchingEatery)
+      })
+      .then(() => {
+        getAttractions()
+          .then(() => {
+            const attractionsArray = useAttractions();
+            const matchingAttraction = attractionsArray.find(
+              (attractionObj) => {
+                return attractionObj.name === directionsAttractionName;
               }
             );
 
-            eventHub.dispatchEvent(getDirectionsButtonEvent);
-          }); // close .then
-        });
-    }); // close .then
+            const attractionLocation =
+              matchingAttraction.city + matchingAttraction.state;
+            console.log(attractionLocation);
+            return attractionLocation;
+          })
+          .then(() => {
+            getParks().then(() => {
+              const parksArray = useParksCopy();
+
+              const matchingPark = parksArray.find((parkObj) => {
+                return parkObj.name === directionsParkName;
+              });
+
+              const matchingParkLat = matchingPark.latitude;
+              const matchingParkLong = matchingPark.longitude;
+
+              const getDirectionsButtonEvent = new CustomEvent(
+                "getDirectionsButtonPressed",
+                {
+                  detail: {
+                    parkLat: matchingParkLat,
+                    parkLong: matchingParkLong,
+                    attractionName: directionsAttractionName,
+                    eateryName: directionsEateryName,
+                  },
+                }
+              );
+
+              eventHub.dispatchEvent(getDirectionsButtonEvent);
+            }); // close .then
+          });
+      });
   } //end if for event listener condition
 }); //end listener
 
-// getEateries()
-// .then(() => {
-//     const eateriesArray = useEateries()
-//     const matchingEatery = eateriesArray.find( eateryObj => {
-//         return (eateryObj.name === directionsEateryName)
-//     })
 
-//     const eateryLocation = matchingEatery.city + matchingEatery.state
-//     console.log (eateryLocation)
-// }).then(() =>
+// const eateriesArray = useEateries();
+// const matchingEatery = eateriesArray.find((eateryObj) => {
+//   return eateryObj.name === directionsEateryName;
+// });
+
+// const eateryLocation = matchingEatery.city + matchingEatery.name;
+// console.log(eateryLocation);
+// // return eateryLocation;
+
