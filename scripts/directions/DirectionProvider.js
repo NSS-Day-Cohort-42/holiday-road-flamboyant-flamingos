@@ -11,7 +11,7 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
     const currentParkLat = parseFloat(customEvent.detail.parkLat)
     const currentParkLong = parseFloat(customEvent.detail.parkLong)
 
-    console.log(customEvent.detail.attractionName)
+    // console.log(customEvent.detail.attractionName)
     currentParkCoordinates = `${currentParkLat},${currentParkLong}`
     
     testLocationName = `yosemite+national+park`
@@ -19,7 +19,12 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
     getCoordinates()
     .then(() => {
         const coordinateTest = useCoordinateCopy()
-        console.log(coordinateTest)
+        const coordinateTestLat = coordinateTest[0].point.lat
+        const coordinateTestLong = coordinateTest[0].point.lng
+
+        currentTestCoordinates = `${coordinateTestLat},${coordinateTestLong}`
+        console.log(currentTestCoordinates)
+        // return currentTestCoordinatess
     })
     
     getDirections()
@@ -32,7 +37,6 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
             })
         }`
         
-        console.log(routeArray[0].instructions)
     })
     
 })
@@ -72,6 +76,7 @@ export const getCoordinates = () => {
 export const useCoordinateCopy = () => {
     return coordinateData.slice()
 }
+
 
 
 
