@@ -1,5 +1,4 @@
 import keyObj from "../Settings.js";
-import { getAttractions } from "../attractions/AttractionProvider.js";
 
 //global vars
 const contentTarget = document.getElementById("directionsContainer");
@@ -7,7 +6,6 @@ const eventHub = document.querySelector(".container");
 
 let currentParkCoordinates;
 let currentEateryCoordinates;
-let currentAttractionCoordinates;
 let eateryLocation;
 let attractionLocation;
 
@@ -28,15 +26,6 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
       const eateryLong = parseFloat(eateryCoordinateData[0].point.lng);
 
       currentEateryCoordinates = `${eateryLat},${eateryLong}`;
-    }).then( () => {
-        getAttractionCoordinates()
-        .then(()=> {
-        const attractionCoordinateData = useEateryCoordinateCopy(); //useEaterycoordinate
-        const attractionLat = parseFloat(attractionCoordinateData[0].point.lat);
-        const attractionLong = parseFloat(attractionCoordinateData[0].point.lng);
-    
-        currentAttractionCoordinates = `${attractionLat},${attractionLong}`;    
-        })
     })
     .then(() => {
       getDirections().then(() => {
@@ -86,17 +75,17 @@ const useEateryCoordinateCopy = () => {
   return eateryCoordinateData.slice();
 };
 
-// attraction coordinate fetch
-let attractionCoordinateData = []
+//attraction coordinate fetch
+// let attractionCoordinateData = []
 
-const getAttractionCoordinates = () => {
-    return fetch(`https://graphhopper.com/api/1/geocode?q=${attractionLocation}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
-    .then(response => response.json())
-    .then(parsedAttractionCoordinateData => {
-        attractionCoordinateData = parsedAttractionCoordinateData.hits
-    })
-}
+// const getAttractionCoordinates = () => {
+//     return fetch(`https://graphhopper.com/api/1/geocode?q=${attractionLocation}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
+//     .then(response => response.json())
+//     .then(parsedAttractionCoordinateData => {
+//         attractionCoordinateData = parsedAttractionCoordinateData.hits
+//     })
+// }
 
-const useAttractionCoordinateCopy = () => {
-    return attractionCoordinateData.slice()
-}
+// const useAttractionCoordinateCopy = () => {
+//     return attractionCoordinateData.slice()
+// }
