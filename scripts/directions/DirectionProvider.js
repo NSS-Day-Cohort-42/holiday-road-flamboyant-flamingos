@@ -6,13 +6,16 @@ let currentTestCoordinates
 
 let testLocationName
 
+let eateryLocation
+// let formattedAttractionLocation
+
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
     const currentParkLat = parseFloat(customEvent.detail.parkLat)
     const currentParkLong = parseFloat(customEvent.detail.parkLong)
+    eateryLocation = customEvent.detail.currentEateryLocation
 
-    // console.log(customEvent.detail.attractionName)
     currentParkCoordinates = `${currentParkLat},${currentParkLong}`
     
     testLocationName = `yosemite+national+park`
@@ -55,11 +58,10 @@ const getDirections = () => {
     })
 }
 
-
 let coordinateData = []
 
 const getCoordinates = () => {
-    return fetch(`https://graphhopper.com/api/1/geocode?q=${testLocationName}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
+    return fetch(`https://graphhopper.com/api/1/geocode?q=${eateryLocation}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
     .then(response => response.json())
     .then(parsedCoordinateData => {
         coordinateData = parsedCoordinateData.hits

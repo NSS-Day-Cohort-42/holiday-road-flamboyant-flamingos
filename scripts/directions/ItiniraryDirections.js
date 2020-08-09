@@ -28,8 +28,7 @@ eventHub.addEventListener("click", (clickEvent) => {
         )
 
         eateryLocation = 
-            matchingEatery.city + matchingEatery.state
-        // console.log(eateryLocation)
+            `${matchingEatery.city}`
       })
       .then(() => {
         getAttractions()
@@ -48,7 +47,6 @@ eventHub.addEventListener("click", (clickEvent) => {
           .then(() => {
             getParks().then(() => {
               const parksArray = useParksCopy();
-              console.log(eateryLocation + attractionLocation)
 
               const matchingPark = parksArray.find((parkObj) => {
                 return parkObj.name === directionsParkName;
@@ -73,7 +71,7 @@ eventHub.addEventListener("click", (clickEvent) => {
             }); 
           });
       });
-      
+
   } //end if for event listener condition
 }); //end listener
 
