@@ -6,6 +6,8 @@ import {
 import { getEateries, useEateries } from "../eateries/EateryProvider.js";
 
 const eventHub = document.querySelector(".container");
+let eateryLocation
+let attractionLocation 
 
 eventHub.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.className === "getDirections") {
@@ -25,9 +27,9 @@ eventHub.addEventListener("click", (clickEvent) => {
             }
         )
 
-        const eateryLocation = 
+        eateryLocation = 
             matchingEatery.city + matchingEatery.state
-        console.log(eateryLocation)
+        // console.log(eateryLocation)
       })
       .then(() => {
         getAttractions()
@@ -39,14 +41,14 @@ eventHub.addEventListener("click", (clickEvent) => {
               }
             );
 
-            const attractionLocation =
+            attractionLocation =
               matchingAttraction.city + matchingAttraction.state;
-            console.log(attractionLocation);
-            return attractionLocation;
+            // console.log(attractionLocation);
           })
           .then(() => {
             getParks().then(() => {
               const parksArray = useParksCopy();
+              console.log(eateryLocation + attractionLocation)
 
               const matchingPark = parksArray.find((parkObj) => {
                 return parkObj.name === directionsParkName;
@@ -61,8 +63,8 @@ eventHub.addEventListener("click", (clickEvent) => {
                   detail: {
                     parkLat: matchingParkLat,
                     parkLong: matchingParkLong,
-                    // attractionLocation: matchingAttractionLocation,
-                    // eateryLocation: matchingEateryLocation,
+                    currentEateryLocation: eateryLocation,
+                    currentAttractionLocation: attractionLocation
                   },
                 }
               );
@@ -71,6 +73,7 @@ eventHub.addEventListener("click", (clickEvent) => {
             }); 
           });
       });
+      
   } //end if for event listener condition
 }); //end listener
 
