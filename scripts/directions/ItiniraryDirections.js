@@ -28,21 +28,21 @@ eventHub.addEventListener("click", (clickEvent) => {
         )
 
         eateryLocation = 
-            `${matchingEatery.city}`
+            `${matchingEatery.city}+${matchingEatery.state}`
       }) // close 2
         .then(() => { //open3
-            getAttractions() ////4
-            .then(() => { //open 5
-                const attractionsArray = useAttractions();
-                const matchingAttraction = attractionsArray.find(
-                (attractionObj) => {
-                    return attractionObj.name === directionsAttractionName;
-                }
-                );
+            getAttractions() //4
+                .then(() => { //open 5
+                    const attractionsArray = useAttractions();
+                    const matchingAttraction = attractionsArray.find(
+                    (attractionObj) => {
+                        return attractionObj.name === directionsAttractionName;
+                        }
+                    );
 
-                attractionLocation =
-                `${matchingAttraction.city}`
-            }) // close 5
+                    attractionLocation =
+                    `${matchingAttraction.city}+${matchingAttraction.state}`
+                }) // close 5
                 .then(() => { //open 6
                     getParks() // 7
                     .then(() => { //open 8

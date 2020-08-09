@@ -41,6 +41,12 @@
       "attractionName": "Largest Fork in the US",
       "eateryName": "Buckhorn Exchange",
       "id": 7
+    },
+    {
+      "parkName": "Cuyahoga Valley",
+      "attractionName": "Avery’s Beverages",
+      "eateryName": "Northwestern Steakhouse",
+      "id": 8
     }
   ]
 }

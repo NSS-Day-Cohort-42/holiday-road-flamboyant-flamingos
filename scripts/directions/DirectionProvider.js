@@ -35,7 +35,7 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
                     const attractionLat = parseFloat(attractionCoordinateData[0].point.lat);
                     const attractionLong = parseFloat(attractionCoordinateData[0].point.lng);
             
-                    currentAttractionCoordinates = `${attractionLat},${attractionLong}`;    
+                    currentAttractionCoordinates = `${attractionLat},${attractionLong}`; 
                 }) //close 5
                 .then(() => { //open 6
                     getDirections() //7
@@ -46,11 +46,11 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
                         (directionObject) => {
                             return directionObject.text;
                         }
-                )}`;
+                    )}`;
                 }); //close 8
         }); // close 6
     }); //close 3
-
+    
 });
 
 //route data fetch
@@ -63,7 +63,7 @@ const useRouteDataCopy = () => {
 
 const getDirections = () => {
   return fetch(
-    `https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentParkCoordinates}&point=${currentEateryCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`
+    `https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentAttractionCoordinates}&point=${currentParkCoordinates}&point=${currentEateryCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`
   )
     .then((response) => response.json())
     .then((parsedRouteData) => {
