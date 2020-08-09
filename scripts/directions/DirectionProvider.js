@@ -24,7 +24,7 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
         const coordinateTestLong = parseFloat(coordinateTest[0].point.lng)
 
         currentTestCoordinates = `${coordinateTestLat},${coordinateTestLong}`
-        
+
     }).then( () => {
         getDirections()
             .then(()=> {
@@ -54,7 +54,6 @@ const getDirections = () => {
         routeData = parsedRouteData.paths
     })
 }
-
 
 
 let coordinateData = []

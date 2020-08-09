@@ -28,7 +28,6 @@ eventHub.addEventListener("click", (clickEvent) => {
         const eateryLocation = 
             matchingEatery.city + matchingEatery.state
         console.log(eateryLocation)
-        return eateryLocation
       })
       .then(() => {
         getAttractions()
