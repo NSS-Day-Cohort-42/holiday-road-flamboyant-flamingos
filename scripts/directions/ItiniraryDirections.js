@@ -41,8 +41,7 @@ eventHub.addEventListener("click", (clickEvent) => {
             );
 
             attractionLocation =
-              matchingAttraction.city + matchingAttraction.state;
-            // console.log(attractionLocation);
+            `${matchingAttraction.city}`
           })
           .then(() => {
             getParks().then(() => {

@@ -3,6 +3,7 @@ import keyObj from "../Settings.js"
 
 let currentParkCoordinates
 let currentEateryCoordinates 
+
 let eateryLocation
 let attractionLocation
 
@@ -12,31 +13,35 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
     const currentParkLat = parseFloat(customEvent.detail.parkLat)
     const currentParkLong = parseFloat(customEvent.detail.parkLong)
     eateryLocation = customEvent.detail.currentEateryLocation
-
+    attractionLocation = customEvent.detail.currentAttractionLocation
+    console.log(attractionLocation)
 
     currentParkCoordinates = `${currentParkLat},${currentParkLong}`
     
     getEateryCoordinates()
     .then(() => {
-        const eateryCoordinateData = useCoordinateCopy()
+        const eateryCoordinateData = useEateryCoordinateCopy() //useEaterycoordinate
         const eateryLat = parseFloat(eateryCoordinateData[0].point.lat)
         const eateryLong = parseFloat(eateryCoordinateData[0].point.lng)
 
         currentEateryCoordinates = `${eateryLat},${eateryLong}`
 
-    }).then( () => {
-        getDirections()
-            .then(()=> {
-                const routeArray = useRouteDataCopy()
-                const arrayOfDirections = routeArray[0].instructions
-                contentTarget.innerHTML = `${
-                arrayOfDirections.map(directionObject => {
-                    return directionObject.text
-                    })
-                }`
-        
-        })
     })
+        .then( () => {
+            getDirections()
+                .then(()=> {
+                    const routeArray = useRouteDataCopy()
+                    const arrayOfDirections = routeArray[0].instructions
+                    contentTarget.innerHTML = `${
+                        arrayOfDirections.map(directionObject => {
+                            return directionObject.text
+                        })
+                    }`             
+                })
+                
+            })
+
+
 })
 
 let routeData = []
@@ -54,17 +59,17 @@ const getDirections = () => {
     })
 }
 
-let coordinateData = []
+let eateryCoordinateData = []
 
 const getEateryCoordinates = () => {
     return fetch(`https://graphhopper.com/api/1/geocode?q=${eateryLocation}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
     .then(response => response.json())
-    .then(parsedCoordinateData => {
-        coordinateData = parsedCoordinateData.hits
+    .then(parsedEateryCoordinateData => {
+        eateryCoordinateData = parsedEateryCoordinateData.hits
     })
 }
 
-const useCoordinateCopy = () => {
-    return coordinateData.slice()
+const useEateryCoordinateCopy = () => {
+    return eateryCoordinateData.slice()
 }
 
