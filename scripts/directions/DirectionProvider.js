@@ -40,6 +40,7 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
                 .then(() => { //open 6
                     getDirections() //7
                         .then(() => { //open 8
+                        if (routeData) {
                         const routeArray = useRouteDataCopy();
                         const arrayOfDirections = routeArray[0].instructions;
                         contentTarget.innerHTML = `${arrayOfDirections.map(
@@ -47,10 +48,11 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
                             return directionObject.text;
                         }
                     )}`;
+                        } else alert('Sorry, directions could not be established for those locations. Google Maps much?')
                 }); //close 8
         }); // close 6
     }); //close 3
-    
+
 });
 
 //route data fetch
@@ -63,7 +65,7 @@ const useRouteDataCopy = () => {
 
 const getDirections = () => {
   return fetch(
-    `https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentAttractionCoordinates}&point=${currentParkCoordinates}&point=${currentEateryCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`
+    `https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentParkCoordinates}&point=${currentAttractionCoordinates}&point=${currentEateryCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`
   )
     .then((response) => response.json())
     .then((parsedRouteData) => {

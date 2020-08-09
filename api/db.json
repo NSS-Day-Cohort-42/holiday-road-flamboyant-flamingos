@@ -47,6 +47,84 @@
       "attractionName": "Avery’s Beverages",
       "eateryName": "Northwestern Steakhouse",
       "id": 8
+    },
+    {
+      "parkName": "Effigy Mounds",
+      "attractionName": "Avery’s Beverages",
+      "eateryName": "Hy's Steak House",
+      "id": 9
+    },
+    {
+      "parkName": "Cuyahoga Valley",
+      "attractionName": "Largest Fork in the US",
+      "eateryName": "Jack Fry's",
+      "id": 10
+    },
+    {
+      "parkName": "Fort Stanwix",
+      "attractionName": "World’s Largest ‘Gone With the Wind’ Collection",
+      "eateryName": "Haven Brothers Diner",
+      "id": 11
+    },
+    {
+      "parkName": "Fort Stanwix",
+      "attractionName": "World’s Largest ‘Gone With the Wind’ Collection",
+      "eateryName": "Marge's Pancake House",
+      "id": 12
+    },
+    {
+      "parkName": "Fort Stanwix",
+      "attractionName": "Mini Statue of Liberty",
+      "eateryName": "Marge's Pancake House",
+      "id": 13
+    },
+    {
+      "parkName": "Fredericksburg &amp; Spotsylvania",
+      "attractionName": "Mini Statue of Liberty",
+      "eateryName": "Marge's Pancake House",
+      "id": 14
+    },
+    {
+      "parkName": "Golden Gate",
+      "attractionName": "Mini Statue of Liberty",
+      "eateryName": "Marge's Pancake House",
+      "id": 15
+    },
+    {
+      "parkName": "Golden Gate",
+      "attractionName": "World’s Largest Paul Bunyan",
+      "eateryName": "Marge's Pancake House",
+      "id": 16
+    },
+    {
+      "parkName": "San Antonio Missions",
+      "attractionName": "Ghostbusters Headquarters",
+      "eateryName": "The Old Clam House",
+      "id": 17
+    },
+    {
+      "parkName": "Motor Cities",
+      "attractionName": "Turtle Boy",
+      "eateryName": "Jack Fry's",
+      "id": 18
+    },
+    {
+      "parkName": "Motor Cities",
+      "attractionName": "Turtle Boy",
+      "eateryName": "Commander's Palace",
+      "id": 19
+    },
+    {
+      "parkName": "Motor Cities",
+      "attractionName": "Spinning Yellow Giant",
+      "eateryName": "Arthur Bryant's",
+      "id": 20
+    },
+    {
+      "parkName": "Manzanar",
+      "attractionName": "Spinning Yellow Giant",
+      "eateryName": "Arthur Bryant's",
+      "id": 21
     }
   ]
 }
