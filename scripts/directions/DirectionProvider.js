@@ -65,7 +65,7 @@ const useRouteDataCopy = () => {
 
 const getDirections = () => {
   return fetch(
-    `https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentParkCoordinates}&point=${currentAttractionCoordinates}&point=${currentEateryCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`
+    `https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentAttractionCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`
   )
     .then((response) => response.json())
     .then((parsedRouteData) => {
@@ -98,7 +98,7 @@ const useEateryCoordinateCopy = () => {
 let attractionCoordinateData = []
 
 const getAttractionCoordinates = () => {
-    return fetch(`https://graphhopper.com/api/1/geocode?q=${attractionLocation}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
+    return fetch(`https://graphhopper.com/api/1/geocode?q=${currentEateryCoordinates}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
     .then(response => response.json())
     .then(parsedAttractionCoordinateData => {
         attractionCoordinateData = parsedAttractionCoordinateData.hits
@@ -108,3 +108,6 @@ const getAttractionCoordinates = () => {
 const useAttractionCoordinateCopy = () => {
     return attractionCoordinateData.slice()
 }
+
+
+// &point=${currentAttractionCoordinates}&point=${currentEateryCoordinates}

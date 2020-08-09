@@ -125,6 +125,12 @@
       "attractionName": "Spinning Yellow Giant",
       "eateryName": "Arthur Bryant's",
       "id": 21
+    },
+    {
+      "parkName": "First Ladies",
+      "attractionName": "Cabazon Dinosaurs",
+      "eateryName": "Louis' Lunch",
+      "id": 22
     }
   ]
 }
