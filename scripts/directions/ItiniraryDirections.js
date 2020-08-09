@@ -27,12 +27,13 @@ eventHub.addEventListener("click", (clickEvent) => {
             }
         )
         if (matchingEatery.businessName.includes("&")) {
-            console.log("what")
+            eateryLocation = `${matchingEatery.businessName} ${matchingEatery.city},${matchingEatery.state}`.replace("&", "")
         }  
             else {
         eateryLocation = 
             `${matchingEatery.businessName} ${matchingEatery.city},${matchingEatery.state}`
             }
+        console.log(eateryLocation)
       }) // close 2
         .then(() => { //open3
             getAttractions() //4
