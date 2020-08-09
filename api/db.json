@@ -1,3 +1,10 @@
 {
-  "itineraries": []
+  "itineraries": [
+    {
+      "parkName": "Frederick Douglass",
+      "attractionName": "Largest Fork in the US",
+      "eateryName": "The Cozy Inn",
+      "id": 1
+    }
+  ]
 }
