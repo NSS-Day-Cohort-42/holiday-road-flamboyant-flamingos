@@ -5,6 +5,18 @@
       "attractionName": "Largest Fork in the US",
       "eateryName": "The Cozy Inn",
       "id": 1
+    },
+    {
+      "parkName": "Frederick Douglass",
+      "attractionName": "Owney the Stuffed Dog Postal Mascot",
+      "eateryName": "Pierce's Pitt Bar-B-Que",
+      "id": 2
+    },
+    {
+      "parkName": "Big Cypress",
+      "attractionName": "Snake World",
+      "eateryName": "Club Paris",
+      "id": 3
     }
   ]
 }

@@ -31,7 +31,7 @@ eventHub.addEventListener("click", (clickEvent) => {
         }  
             else {
         eateryLocation = 
-            `${matchingEatery.businessName} ${matchingEatery.city},${matchingEatery.state}`
+            `${matchingEatery.businessName} ${matchingEatery.city}`
             }
         console.log(eateryLocation)
       }) // close 2
