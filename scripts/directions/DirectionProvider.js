@@ -18,10 +18,11 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
     
     getEateryCoordinates()
     .then(() => {
-        const coordinateTest = useCoordinateCopy()
-        const coordinateTestLat = parseFloat(coordinateTest[0].point.lat)
-        const coordinateTestLong = parseFloat(coordinateTest[0].point.lng)
-        currentEateryCoordinates = `${coordinateTestLat},${coordinateTestLong}`
+        const eateryCoordinateData = useCoordinateCopy()
+        const eateryLat = parseFloat(eateryCoordinateData[0].point.lat)
+        const eateryLong = parseFloat(eateryCoordinateData[0].point.lng)
+
+        currentEateryCoordinates = `${eateryLat},${eateryLong}`
 
     }).then( () => {
         getDirections()
