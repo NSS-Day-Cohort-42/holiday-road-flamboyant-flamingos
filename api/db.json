@@ -143,6 +143,18 @@
       "attractionName": "Big White Shirt",
       "eateryName": "Gene &amp; Jude's",
       "id": 24
+    },
+    {
+      "parkName": "Cape Cod",
+      "attractionName": "Cabazon Dinosaurs",
+      "eateryName": "Big Bob Gibson Bar-B-Que",
+      "id": 25
+    },
+    {
+      "parkName": "Cape Cod",
+      "attractionName": "Where Kurt Cobain Lived in a Refrigerator Box",
+      "eateryName": "Big Bob Gibson Bar-B-Que",
+      "id": 26
     }
   ]
 }
