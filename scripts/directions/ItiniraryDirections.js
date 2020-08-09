@@ -28,7 +28,7 @@ eventHub.addEventListener("click", (clickEvent) => {
         )
 
         eateryLocation = 
-            `${matchingEatery.businessName}+${matchingEatery.city}+${matchingEatery.state}`
+            `${matchingEatery.city}+${matchingEatery.state}`
         
       }) // close 2
         .then(() => { //open3
@@ -42,7 +42,7 @@ eventHub.addEventListener("click", (clickEvent) => {
                     );
 
                     attractionLocation =
-                    `${matchingAttraction.name}+${matchingAttraction.city}+${matchingAttraction.state}`
+                    `${matchingAttraction.city}+${matchingAttraction.state}`
                 }) // close 5
                 .then(() => { //open 6
                     getParks() // 7
@@ -78,3 +78,6 @@ eventHub.addEventListener("click", (clickEvent) => {
 
 
 
+// ${matchingAttraction.name}+
+
+// ${matchingEatery.businessName}+

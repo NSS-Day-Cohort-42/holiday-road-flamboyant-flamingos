@@ -1,5 +1,4 @@
 import keyObj from "../Settings.js";
-import { getAttractions } from "../attractions/AttractionProvider.js";
 
 //global vars
 const contentTarget = document.getElementById("directionsContainer");
@@ -8,7 +7,7 @@ const eventHub = document.querySelector(".container");
 let currentParkCoordinates;
 let currentEateryCoordinates;
 let currentAttractionCoordinates;
-let eateryLocation;
+let eateryLocation
 let attractionLocation;
 
 //getdirections event listener
@@ -17,7 +16,6 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
   const currentParkLong = parseFloat(customEvent.detail.parkLong);
   eateryLocation = customEvent.detail.currentEateryLocation;
   attractionLocation = customEvent.detail.currentAttractionLocation;
-
   currentParkCoordinates = `${currentParkLat},${currentParkLong}`;
 
   getEateryCoordinates() //1
@@ -25,13 +23,14 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
       const eateryCoordinateData = useEateryCoordinateCopy(); //useEaterycoordinate
       const eateryLat = parseFloat(eateryCoordinateData[0].point.lat);
       const eateryLong = parseFloat(eateryCoordinateData[0].point.lng);
-
+    
       currentEateryCoordinates = `${eateryLat},${eateryLong}`;
     }) //close 2
         .then(() => { //open 3
             getAttractionCoordinates() //4
                 .then(()=> {//open 5
-                    const attractionCoordinateData = useAttractionCoordinateCopy(); //useAttractionoordinate
+                    const attractionCoordinateData = useAttractionCoordinateCopy();
+                    console.log(attractionCoordinateData) //useAttractionoordinate
                     const attractionLat = parseFloat(attractionCoordinateData[0].point.lat);
                     const attractionLong = parseFloat(attractionCoordinateData[0].point.lng);
             
@@ -48,7 +47,7 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
                             return directionObject.text;
                         }
                     )}`;
-                        } else alert('Sorry, directions could not be established for those locations. Google Maps much?')
+                        }
                 }); //close 8
         }); // close 6
     }); //close 3
@@ -65,7 +64,7 @@ const useRouteDataCopy = () => {
 
 const getDirections = () => {
   return fetch(
-    `https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentAttractionCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`
+    `https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentAttractionCoordinates}&point=${currentParkCoordinates}&point=${currentEateryCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`
   )
     .then((response) => response.json())
     .then((parsedRouteData) => {
@@ -98,7 +97,7 @@ const useEateryCoordinateCopy = () => {
 let attractionCoordinateData = []
 
 const getAttractionCoordinates = () => {
-    return fetch(`https://graphhopper.com/api/1/geocode?q=${currentEateryCoordinates}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
+    return fetch(`https://graphhopper.com/api/1/geocode?q=${attractionLocation}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
     .then(response => response.json())
     .then(parsedAttractionCoordinateData => {
         attractionCoordinateData = parsedAttractionCoordinateData.hits
@@ -108,6 +107,3 @@ const getAttractionCoordinates = () => {
 const useAttractionCoordinateCopy = () => {
     return attractionCoordinateData.slice()
 }
-
-
-// &point=${currentAttractionCoordinates}&point=${currentEateryCoordinates}

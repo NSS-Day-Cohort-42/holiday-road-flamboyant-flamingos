@@ -131,6 +131,12 @@
       "attractionName": "Cabazon Dinosaurs",
       "eateryName": "Louis' Lunch",
       "id": 22
+    },
+    {
+      "parkName": "Charles Pinckney",
+      "attractionName": "Owney the Stuffed Dog Postal Mascot",
+      "eateryName": "Occidental Grill &amp; Seafood",
+      "id": 23
     }
   ]
 }
