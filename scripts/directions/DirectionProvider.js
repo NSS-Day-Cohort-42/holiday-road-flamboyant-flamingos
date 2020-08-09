@@ -2,12 +2,9 @@ const contentTarget = document.getElementById("directionsContainer")
 import keyObj from "../Settings.js"
 
 let currentParkCoordinates
-let currentTestCoordinates 
-
-let testLocationName
-
+let currentEateryCoordinates 
 let eateryLocation
-// let formattedAttractionLocation
+let attractionLocation
 
 const eventHub = document.querySelector(".container")
 
@@ -16,17 +13,15 @@ eventHub.addEventListener("getDirectionsButtonPressed", customEvent => {
     const currentParkLong = parseFloat(customEvent.detail.parkLong)
     eateryLocation = customEvent.detail.currentEateryLocation
 
+
     currentParkCoordinates = `${currentParkLat},${currentParkLong}`
     
-    testLocationName = `yosemite+national+park`
-    
-    getCoordinates()
+    getEateryCoordinates()
     .then(() => {
         const coordinateTest = useCoordinateCopy()
         const coordinateTestLat = parseFloat(coordinateTest[0].point.lat)
         const coordinateTestLong = parseFloat(coordinateTest[0].point.lng)
-
-        currentTestCoordinates = `${coordinateTestLat},${coordinateTestLong}`
+        currentEateryCoordinates = `${coordinateTestLat},${coordinateTestLong}`
 
     }).then( () => {
         getDirections()
@@ -51,7 +46,7 @@ const useRouteDataCopy = () => {
 }
 
 const getDirections = () => {
-    return fetch(`https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentParkCoordinates}&point=${currentTestCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`)
+    return fetch(`https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentParkCoordinates}&point=${currentEateryCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`)
     .then(response => response.json())
     .then(parsedRouteData => {
         routeData = parsedRouteData.paths
@@ -60,7 +55,7 @@ const getDirections = () => {
 
 let coordinateData = []
 
-const getCoordinates = () => {
+const getEateryCoordinates = () => {
     return fetch(`https://graphhopper.com/api/1/geocode?q=${eateryLocation}&locale=us&debug=true&key=${keyObj.graphhopperKey}`)
     .then(response => response.json())
     .then(parsedCoordinateData => {
