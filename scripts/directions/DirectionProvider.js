@@ -17,38 +17,40 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
   const currentParkLong = parseFloat(customEvent.detail.parkLong);
   eateryLocation = customEvent.detail.currentEateryLocation;
   attractionLocation = customEvent.detail.currentAttractionLocation;
-  console.log(attractionLocation);
 
   currentParkCoordinates = `${currentParkLat},${currentParkLong}`;
 
-  getEateryCoordinates()
-    .then(() => {
+  getEateryCoordinates() //1
+    .then(() => { //open 2
       const eateryCoordinateData = useEateryCoordinateCopy(); //useEaterycoordinate
       const eateryLat = parseFloat(eateryCoordinateData[0].point.lat);
       const eateryLong = parseFloat(eateryCoordinateData[0].point.lng);
 
       currentEateryCoordinates = `${eateryLat},${eateryLong}`;
-    }).then( () => {
-        getAttractionCoordinates()
-        .then(()=> {
-        const attractionCoordinateData = useEateryCoordinateCopy(); //useEaterycoordinate
-        const attractionLat = parseFloat(attractionCoordinateData[0].point.lat);
-        const attractionLong = parseFloat(attractionCoordinateData[0].point.lng);
-    
-        currentAttractionCoordinates = `${attractionLat},${attractionLong}`;    
-        })
-    })
-    .then(() => {
-      getDirections().then(() => {
-        const routeArray = useRouteDataCopy();
-        const arrayOfDirections = routeArray[0].instructions;
-        contentTarget.innerHTML = `${arrayOfDirections.map(
-          (directionObject) => {
-            return directionObject.text;
-          }
-        )}`;
-      });
-    });//try here
+    }) //close 2
+        .then(() => { //open 3
+            getAttractionCoordinates() //4
+                .then(()=> {//open 5
+                    const attractionCoordinateData = useAttractionCoordinateCopy(); //useAttractionoordinate
+                    const attractionLat = parseFloat(attractionCoordinateData[0].point.lat);
+                    const attractionLong = parseFloat(attractionCoordinateData[0].point.lng);
+            
+                    currentAttractionCoordinates = `${attractionLat},${attractionLong}`;    
+                }) //close 5
+                .then(() => { //open 6
+                    getDirections() //7
+                        .then(() => { //open 8
+                        const routeArray = useRouteDataCopy();
+                        const arrayOfDirections = routeArray[0].instructions;
+                        contentTarget.innerHTML = `${arrayOfDirections.map(
+                        (directionObject) => {
+                            return directionObject.text;
+                        }
+                )}`;
+                }); //close 8
+        }); // close 6
+    }); //close 3
+
 });
 
 //route data fetch
@@ -85,6 +87,10 @@ const getEateryCoordinates = () => {
 const useEateryCoordinateCopy = () => {
   return eateryCoordinateData.slice();
 };
+
+
+
+
 
 // attraction coordinate fetch
 let attractionCoordinateData = []
