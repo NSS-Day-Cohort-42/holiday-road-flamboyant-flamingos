@@ -26,10 +26,13 @@ eventHub.addEventListener("click", (clickEvent) => {
                 return eateryObj.businessName === directionsEateryName
             }
         )
-
+        if (matchingEatery.businessName.includes("&")) {
+            console.log("what")
+        }  
+            else {
         eateryLocation = 
-            `${matchingEatery.city}+${matchingEatery.state}`
-        
+            `${matchingEatery.businessName} ${matchingEatery.city},${matchingEatery.state}`
+            }
       }) // close 2
         .then(() => { //open3
             getAttractions() //4

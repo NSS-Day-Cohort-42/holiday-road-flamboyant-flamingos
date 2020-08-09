@@ -137,6 +137,12 @@
       "attractionName": "Owney the Stuffed Dog Postal Mascot",
       "eateryName": "Occidental Grill &amp; Seafood",
       "id": 23
+    },
+    {
+      "parkName": "Augusta Canal",
+      "attractionName": "Big White Shirt",
+      "eateryName": "Gene &amp; Jude's",
+      "id": 24
     }
   ]
 }

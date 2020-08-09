@@ -64,7 +64,7 @@ const useRouteDataCopy = () => {
 
 const getDirections = () => {
   return fetch(
-    `https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentAttractionCoordinates}&point=${currentParkCoordinates}&point=${currentEateryCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`
+    `https://graphhopper.com/api/1/route?point=${nashvilleCoordinates}&point=${currentEateryCoordinates}&point=${currentAttractionCoordinates}&point=${currentParkCoordinates}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${keyObj.graphhopperKey}`
   )
     .then((response) => response.json())
     .then((parsedRouteData) => {
