@@ -6,7 +6,7 @@ const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("delete--")){
-    if (window.confirm("Press `OK` to Delete this itinerary forever")){
+    // if (window.confirm("Press `OK` to Delete this itinerary forever")){
     const [prefix, itineraryId] = clickEvent.target.id.split("--")
     const deleteButtonEvent = new CustomEvent("ItineraryDeleteButtonClicked", {
         detail: {
@@ -15,7 +15,7 @@ eventHub.addEventListener("click", clickEvent => {
     })
     eventHub.dispatchEvent(deleteButtonEvent)
     console.log(deleteButtonEvent)
-    }
+    // }
     }
 })
 
