@@ -25,11 +25,15 @@ eventHub.addEventListener("itineraryStateChanged", () => {
 
 const render = (currentItineraryArray) => {
     contentTarget.innerHTML = `
-                            ${
-                                currentItineraryArray.map(itineraryObj => {
-                                    return itinerary(itineraryObj)
-                                }).reverse().join("")
-                            }
+        <div class="itineraryListPreview">
+        <h2 class="savedItineraries__heading">Your Saved Itineraries:</h2>
+
+            ${
+                currentItineraryArray.map(itineraryObj => {
+                    return itinerary(itineraryObj)
+                }).reverse().join("")
+            }
+        </div>
     `
 }
 

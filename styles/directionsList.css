@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
-#directionsContainer {
+.directionPreview {
     height: 527.438px;
-    width: 273.328ps;
+    width: 273.328px;
     overflow: scroll;
     font-family: 'Julius Sans One', sans-serif;
 }

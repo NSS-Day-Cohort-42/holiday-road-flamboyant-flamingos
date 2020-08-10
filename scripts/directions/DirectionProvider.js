@@ -63,11 +63,15 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
 const renderDirections = () => {
   const routeArray = useRouteDataCopy();
   const arrayOfDirections = routeArray[0].instructions;
-  contentTarget.innerHTML = `${arrayOfDirections
+  contentTarget.innerHTML = `
+  <div class="directionPreview"> 
+  <h3 class="direction__header"> <strong>Directions</strong> </h3>
+  ${arrayOfDirections
     .map((directionObject) => {
       return `<div class="direction">${directionObject.text}</div>`;
     })
-    .join(" ")}`;
+    .join(" ")}
+    </div>`;
 };
 
 //route data fetch

@@ -1,3 +1,16 @@
 {
-  "itineraries": []
+  "itineraries": [
+    {
+      "parkName": "Belmont-Paul Women's Equality",
+      "attractionName": "White House Replica",
+      "eateryName": "El Charro Cafe",
+      "id": 1
+    },
+    {
+      "parkName": "Belmont-Paul Women's Equality",
+      "attractionName": "Owney the Stuffed Dog Postal Mascot",
+      "eateryName": "Club Paris",
+      "id": 2
+    }
+  ]
 }

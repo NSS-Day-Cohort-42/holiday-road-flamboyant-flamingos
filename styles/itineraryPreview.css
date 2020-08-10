@@ -66,11 +66,6 @@
     font-family: 'Julius Sans One', sans-serif;
 }
 
-
-.forecast { 
-    font-family: 'Julius Sans One', sans-serif;
-}
-
 .parkDetailsButton {
     box-shadow:inset 0px 1px 3px 0px #91b8b3;
 	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
@@ -176,17 +171,4 @@
     margin-top: 1rem;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #2b665e;
-}
-
-.forecast { 
-    display: flex;
-    justify-content: left;
-    margin-left: 20rem;
-}
-
-.forecastCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
