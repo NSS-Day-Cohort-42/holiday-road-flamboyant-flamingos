@@ -1,34 +1,10 @@
 {
   "itineraries": [
     {
-      "parkName": "Big Cypress",
+      "parkName": "Cuyahoga Valley",
       "attractionName": "Cabazon Dinosaurs",
-      "eateryName": "Deer Park Tavern",
+      "eateryName": "Buckhorn Exchange",
       "id": 1
-    },
-    {
-      "parkName": "Fredericksburg &amp; Spotsylvania",
-      "attractionName": "White House Replica",
-      "eateryName": "H&amp;H Soul Food",
-      "id": 2
-    },
-    {
-      "parkName": "Fredericksburg &amp; Spotsylvania",
-      "attractionName": "White House Replica",
-      "eateryName": "Occidental Grill &amp; Seafood",
-      "id": 3
-    },
-    {
-      "parkName": "Camp Nelson",
-      "attractionName": "Man-Killing Clam",
-      "eateryName": "Louis' Lunch",
-      "id": 4
-    },
-    {
-      "parkName": "Dry Tortugas",
-      "attractionName": "Man-Killing Clam",
-      "eateryName": "Louis' Lunch",
-      "id": 5
     }
   ]
 }
