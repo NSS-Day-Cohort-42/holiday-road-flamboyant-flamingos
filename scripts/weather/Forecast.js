@@ -21,7 +21,7 @@ const render = (forecastData) => {
 
     contentTarget.innerHTML = `
                             <section class="forcastStylingCard">
-                                <h3 class="forecastHeading">5-day Forecast for this Park Destination</h3>
+                                <h2 class="forecastHeading">Forecast for this Park</h2>
                                 ${
                                     fiveDayForeCastArray.map(day => {
                                         return `<div class="forecastCard">${forecastCard(day)}<div>`

@@ -52,7 +52,7 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
             .then(() => {
               //open 8
               if (routeData) {
-                renderDirections()
+                renderDirections();
               } else
                 alert("Sorry, directions not available. Google Maps much?");
             }); //close 8
@@ -63,12 +63,23 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
 const renderDirections = () => {
   const routeArray = useRouteDataCopy();
   const arrayOfDirections = routeArray[0].instructions;
-  contentTarget.innerHTML = `${arrayOfDirections
+  contentTarget.innerHTML = `<h2>Directions</h2>
+                            <button id="closeDirectionsButton">Close Directions</button>
+                            <section class="directionsList">
+  ${arrayOfDirections
     .map((directionObject) => {
       return `<div class="direction">${directionObject.text}</div>`;
     })
-    .join(" ")}`;
+    .join(" ")}
+    </section>
+    `;
 };
+
+eventHub.addEventListener("click", clickEvent => {
+  if (clickEvent.target.id === "closeDirectionsButton") {
+    contentTarget.innerHTML = ""
+  }
+})
 
 //route data fetch
 let routeData = [];

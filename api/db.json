@@ -1,3 +1,22 @@
 {
-  "itineraries": []
+  "itineraries": [
+    {
+      "parkName": "Camp Nelson",
+      "attractionName": "Cabazon Dinosaurs",
+      "eateryName": "Deer Park Tavern",
+      "id": 1
+    },
+    {
+      "parkName": "Bryce Canyon",
+      "attractionName": "Snake World",
+      "eateryName": "Occidental Grill &amp; Seafood",
+      "id": 2
+    },
+    {
+      "parkName": "Bryce Canyon",
+      "attractionName": "Owney the Stuffed Dog Postal Mascot",
+      "eateryName": "Occidental Grill &amp; Seafood",
+      "id": 3
+    }
+  ]
 }
