@@ -11,6 +11,12 @@
       "attractionName": "Fountain of Youth",
       "eateryName": "The Old Clam House",
       "id": 2
+    },
+    {
+      "parkName": "Camp Nelson",
+      "attractionName": "Largest Fork in the US",
+      "eateryName": "McClard's BBQ",
+      "id": 3
     }
   ]
 }

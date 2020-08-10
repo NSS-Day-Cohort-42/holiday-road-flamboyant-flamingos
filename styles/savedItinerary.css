@@ -23,3 +23,9 @@
 	text-decoration:none;
 	text-shadow:0px -1px 0px #2b665e;
 }
+
+.savedItineraries { 
+    display: flex;
+    flex-direction: column;
+    margin-left: 40rem;
+}
