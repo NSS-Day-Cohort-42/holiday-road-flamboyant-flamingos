@@ -17,6 +17,18 @@
       "attractionName": "Fountain of Youth",
       "eateryName": "The Common Man",
       "id": 3
+    },
+    {
+      "parkName": "San Antonio Missions",
+      "attractionName": "Love Butt",
+      "eateryName": "Salt Lick",
+      "id": 4
+    },
+    {
+      "parkName": "Ozark",
+      "attractionName": "Grave of Marie Laveau, the Voodoo Queen",
+      "eateryName": "The Cozy Inn",
+      "id": 5
     }
   ]
 }

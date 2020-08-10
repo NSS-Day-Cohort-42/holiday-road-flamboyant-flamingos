@@ -64,14 +64,16 @@ const renderDirections = () => {
   const routeArray = useRouteDataCopy();
   const arrayOfDirections = routeArray[0].instructions;
   contentTarget.innerHTML = `
-    <h2 class="directions__heading">Directions</h2>
+    <section class="directions__header">
+      <h2 class="directions__heading">Directions</h2>
       <button id="closeDirectionsButton">Close Directions</button>
-      <section class="directionsList">
-        ${arrayOfDirections
-          .map((directionObject) => {
-            return `<div class="direction">${directionObject.text}</div>`;
-          })
-          .join(" ")}
+    </section>
+    <section class="directionsList">
+      ${arrayOfDirections
+        .map((directionObject) => {
+          return `<div class="direction">${directionObject.text}</div>`;
+        })
+        .join(" ")}
     </section>
     `;
 };
