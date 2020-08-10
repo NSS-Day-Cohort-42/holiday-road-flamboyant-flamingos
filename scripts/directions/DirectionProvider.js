@@ -1,7 +1,7 @@
 import keyObj from "../Settings.js";
 
 //global vars
-const contentTarget = document.getElementById("directionsContainer");
+const contentTarget = document.querySelector(".directions");
 const eventHub = document.querySelector(".container");
 
 let currentParkCoordinates;
