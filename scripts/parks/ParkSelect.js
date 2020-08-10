@@ -20,7 +20,7 @@ contentTarget.addEventListener("change", (changeEvent) => {
 const render = parksCollection => {
     contentTarget.innerHTML = `
     <select class= "dropdown" id="parkSelect">
-        <option vlaue- "0">National Parks</option>
+        <option vlaue- "0">Choose a National Park...</option>
         ${
             parksCollection.map(
                 parksObj => {
