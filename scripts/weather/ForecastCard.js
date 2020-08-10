@@ -12,14 +12,18 @@ export const forecastCard = currentDayArray => {
     let allDailyTemps = currentDayArray.map(snapshot => {
         return snapshot.main.temp
     })
-    let high = Math.max(...allDailyTemps)
-    let low = Math.min(...allDailyTemps)
+    let max = Math.max(...allDailyTemps)
+    let min = Math.min(...allDailyTemps)
+
+    let high = Math.round(max)
+    let low = Math.round(min)
 
     return `<section class="card forecastCard">
                 <div class="forecastItem forecastCard__day">${dayOfWeek}</div>
                 <div class="forecastItem forecastCard__conditions">${conditions}</<div>
                 <img class="forecastItem forecastCard__icon" src="http://openweathermap.org/img/w/${icon}.png">
                 <div class="forecastItem forecastCard_hiLow">High: ${high}&#176F Low: ${low}&#176F</div>
+                </br>
             </section>
             `
 }
