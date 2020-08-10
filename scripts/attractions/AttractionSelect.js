@@ -27,7 +27,7 @@ export const AttractionSelect = () => {
     const render = attractionCollection => {
 
         contentTarget.innerHTML = `
-            <select class="dropdown" id="attractionSelect">
+            <select class="dropdown dropdown_animation" id="attractionSelect">
                 <option value="0">Choose an Attraction...</option>
                 ${
                     attractionCollection.map(
