@@ -68,7 +68,7 @@ const render = (park) => {
                     ).join("")
                 }
                 <h5>Park Site</h5>
-                <div class="park__url"><a target=_blank href="${park.url}">Cuyahoga Valley Website</a></div>
+                <div class="park__url"><a target=_blank href="${park.url}">${park.name}'s Website</a></div>
         <br></br>
         <button id="parkDetailCloseButton">Close</button>
         </dialog>
