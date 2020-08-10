@@ -68,6 +68,8 @@
 
 
 .forecast { 
+    display: flex;
+    justify-content: left;
     font-family: 'Julius Sans One', sans-serif;
 }
 
