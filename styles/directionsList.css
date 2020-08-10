@@ -3,6 +3,9 @@
 
 .directions {
     flex: 1;
+    overflow: hidden;
+    max-height: 600px;
+    overflow: scroll;
 }
 
 .directions:empty {

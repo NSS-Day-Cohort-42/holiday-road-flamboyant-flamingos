@@ -3,6 +3,8 @@
 
 .savedItineraries {
 	flex: 1;
+	max-height: 600px;
+	overflow: scroll;
 }
 
 .savedItineraries:empty {
@@ -11,7 +13,12 @@
 
 .saveItinerary { 
     display: flex;
-    justify-content: center;
+	justify-content: center;
+<<<<<<< Updated upstream
+	margin: 3rem;
+=======
+	/* margin: 3rem; */
+>>>>>>> Stashed changes
 }
 
 #showItineraries {
@@ -27,7 +34,7 @@
     font-weight: bold;
     font-size: 25px;
     padding: 15px 30px;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 	text-decoration:none;
 	text-shadow:0px -1px 0px #2b665e;
 }
@@ -44,7 +51,7 @@
 	margin-right: 6rem;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
-    padding: .25%;
+    padding: 1rem;
     border: 1px solid black;
     border-radius: 25px;
     width: 250px;

@@ -17,6 +17,35 @@
       "attractionName": "Owney the Stuffed Dog Postal Mascot",
       "eateryName": "Occidental Grill &amp; Seafood",
       "id": 3
+    },
+    {
+<<<<<<< Updated upstream
+      "parkName": "Cape Cod",
+      "attractionName": "Owney the Stuffed Dog Postal Mascot",
+      "eateryName": "Deer Park Tavern",
+=======
+      "parkName": "Fort Davis",
+      "attractionName": "Cabazon Dinosaurs",
+      "eateryName": "Joe's Stone Crab",
+>>>>>>> Stashed changes
+      "id": 4
+    },
+    {
+      "parkName": "Cape Cod",
+      "attractionName": "Owney the Stuffed Dog Postal Mascot",
+<<<<<<< Updated upstream
+      "eateryName": "Deer Park Tavern",
+      "id": 5
+    },
+    {
+      "parkName": "Cape Cod",
+      "attractionName": "Owney the Stuffed Dog Postal Mascot",
+      "eateryName": "Deer Park Tavern",
+      "id": 6
+=======
+      "eateryName": "McClard's BBQ",
+      "id": 5
+>>>>>>> Stashed changes
     }
   ]
 }

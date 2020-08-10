@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
+
 .forecast { 
+    display: flex;
+    justify-content: center;
     font-family: 'Julius Sans One', sans-serif;
+    flex: 1;
 }
+
 
 .forecast:empty {
     display:none
@@ -183,11 +188,6 @@
 	text-shadow:0px -1px 0px #2b665e;
 }
 
-.forecast { 
-    display: flex;
-    justify-content: left;
-    flex: 1;
-}
 
 .forecastCard {
     display: flex;
