@@ -184,7 +184,9 @@
     margin-left: 20rem;
 }
 
-.forecastStylingCard { 
+.forecastCard {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
