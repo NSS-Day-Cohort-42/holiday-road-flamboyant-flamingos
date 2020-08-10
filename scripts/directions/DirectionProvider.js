@@ -63,17 +63,19 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
 const renderDirections = () => {
   const routeArray = useRouteDataCopy();
   const arrayOfDirections = routeArray[0].instructions;
-  contentTarget.innerHTML = `<h2>Directions</h2>
+  contentTarget.innerHTML = `<section class="directionsList">
+                            <h2>Directions</h2>
                             <button id="closeDirectionsButton">Close Directions</button>
-                            <section class="directionsList">
-  ${arrayOfDirections
-    .map((directionObject) => {
-      return `<div class="direction">${directionObject.text}</div>`;
-    })
-    .join(" ")}
-    </section>
-    `;
-};
+                            <div class="directionsItems">
+                          ${arrayOfDirections
+                            .map((directionObject) => {
+                    return `<div class="direction">${directionObject.text}</div>`;
+                            })
+                            .join(" ")}
+                            </div>
+                            </section>
+                            `;
+                        };
 
 eventHub.addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "closeDirectionsButton") {

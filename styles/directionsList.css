@@ -6,6 +6,12 @@
     font-family: 'Julius Sans One', sans-serif;
 }
 
+.directionsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #closeDirectionsButton {
     box-shadow:inset 0px 1px 3px 0px #91b8b3;
 	background:linear-gradient(to bottom, #a6d6c9 5%, #6c7c7c 100%);
