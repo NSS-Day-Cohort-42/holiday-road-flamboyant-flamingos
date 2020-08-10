@@ -1,7 +1,6 @@
 {
   "itineraries": [
     {
-<<<<<<< HEAD
       "parkName": "Belmont-Paul Women's Equality",
       "attractionName": "White House Replica",
       "eateryName": "El Charro Cafe",
@@ -12,24 +11,12 @@
       "attractionName": "Owney the Stuffed Dog Postal Mascot",
       "eateryName": "Club Paris",
       "id": 2
-=======
-      "parkName": "Camp Nelson",
-      "attractionName": "Cabazon Dinosaurs",
-      "eateryName": "Deer Park Tavern",
-      "id": 1
     },
     {
       "parkName": "Bryce Canyon",
-      "attractionName": "Snake World",
-      "eateryName": "Occidental Grill &amp; Seafood",
-      "id": 2
-    },
-    {
-      "parkName": "Bryce Canyon",
-      "attractionName": "Owney the Stuffed Dog Postal Mascot",
-      "eateryName": "Occidental Grill &amp; Seafood",
+      "attractionName": "Fountain of Youth",
+      "eateryName": "The Common Man",
       "id": 3
->>>>>>> master
     }
   ]
 }
