@@ -20,6 +20,7 @@ export const forecastCard = currentDayArray => {
                 <div class="forecastItem forecastCard__conditions">${conditions}</<div>
                 <img class="forecastItem forecastCard__icon" src="http://openweathermap.org/img/w/${icon}.png">
                 <div class="forecastItem forecastCard_hiLow">High: ${high}&#176F Low: ${low}&#176F</div>
+                </br>
             </section>
             `
 }
