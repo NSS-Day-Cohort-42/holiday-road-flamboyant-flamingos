@@ -5,6 +5,12 @@
       "attractionName": "Largest Fork in the US",
       "eateryName": "McClard's BBQ",
       "id": 1
+    },
+    {
+      "parkName": "Cape Cod",
+      "attractionName": "Fountain of Youth",
+      "eateryName": "The Old Clam House",
+      "id": 2
     }
   ]
 }
