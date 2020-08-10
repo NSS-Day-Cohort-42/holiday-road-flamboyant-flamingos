@@ -25,10 +25,9 @@
 }
 
 .itineraryList {
-	height: 527.438px;
-	width: 273.328ps;
-	overflow: scroll;
-	font-family: 'Julius Sans One', sans-serif;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 

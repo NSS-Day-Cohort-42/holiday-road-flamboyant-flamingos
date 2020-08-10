@@ -1,4 +1,11 @@
 @import "./selector.css";
 @import "./itineraryPreview.css";
 @import "./savedItinerary.css";
-@import "./directionsList.css"
+@import "./directionsList.css";
+
+.bottomContentWrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
