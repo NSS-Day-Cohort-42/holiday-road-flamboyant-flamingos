@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
+.savedItineraries {
+	flex: 1;
+}
+
+.savedItineraries:empty {
+	display:none;
+}
+
 .saveItinerary { 
     display: flex;
     justify-content: center;

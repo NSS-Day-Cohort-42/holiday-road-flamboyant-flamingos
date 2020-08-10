@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
+.directions {
+    flex: 1;
+}
+
+.directions:empty {
+	display:none;
+}
+
 .directionsContainer {
     overflow: scroll;
     font-family: 'Julius Sans One', sans-serif;

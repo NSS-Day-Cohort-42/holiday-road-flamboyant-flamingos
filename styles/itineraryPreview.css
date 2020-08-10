@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
+.forecast { 
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.forecast:empty {
+    display:none
+}
+
 .itineraryPreview__heading { 
     display: flex;
     justify-content: center;
@@ -67,9 +75,6 @@
 }
 
 
-.forecast { 
-    font-family: 'Julius Sans One', sans-serif;
-}
 
 .parkDetailsButton {
     box-shadow:inset 0px 1px 3px 0px #91b8b3;
@@ -181,6 +186,7 @@
 .forecast { 
     display: flex;
     justify-content: left;
+    flex: 1;
 }
 
 .forecastCard {
