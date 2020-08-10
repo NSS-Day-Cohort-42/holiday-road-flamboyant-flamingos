@@ -42,9 +42,9 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
                         const arrayOfDirections = routeArray[0].instructions;
                         contentTarget.innerHTML = `${arrayOfDirections.map(
                         (directionObject) => {
-                            return directionObject.text;
+                            return `<div class="direction">${directionObject.text}</div>`;
                         }
-                    )}`;
+                    ).join("; ")}`;
                         } else alert("Sorry, direcitons not available. Google Maps much?")
                 }); //close 8
         }); // close 6
@@ -67,6 +67,7 @@ const getDirections = () => {
     .then((response) => response.json())
     .then((parsedRouteData) => {
       routeData = parsedRouteData.paths;
+      console.log(routeData)
     });
 };
 

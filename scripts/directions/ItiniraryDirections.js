@@ -33,7 +33,6 @@ eventHub.addEventListener("click", (clickEvent) => {
         eateryLocation = 
             `${matchingEatery.businessName} ${matchingEatery.city}`
             }
-        console.log(eateryLocation)
       }) // close 2
         .then(() => { //open3
             getAttractions() //4

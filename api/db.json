@@ -17,6 +17,18 @@
       "attractionName": "Snake World",
       "eateryName": "Club Paris",
       "id": 3
+    },
+    {
+      "parkName": "Fort Stanwix",
+      "attractionName": "Snake World",
+      "eateryName": "H&amp;H Soul Food",
+      "id": 4
+    },
+    {
+      "parkName": "Cuyahoga Valley",
+      "attractionName": "Elvis Memorial Chapel",
+      "eateryName": "McClard's BBQ",
+      "id": 5
     }
   ]
 }
