@@ -67,7 +67,7 @@ const renderDirections = () => {
     .map((directionObject) => {
       return `<div class="direction">${directionObject.text}</div>`;
     })
-    .join("; ")}`;
+    .join(" ")}`;
 };
 
 //route data fetch
