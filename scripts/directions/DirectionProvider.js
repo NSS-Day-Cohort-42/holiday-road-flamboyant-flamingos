@@ -20,10 +20,12 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
 
   getEateryCoordinates() //1
     .then(() => { //open 2
-      const eateryCoordinateData = useEateryCoordinateCopy(); //useEaterycoordinate
+    try {
+      const eateryCoordinateData = useEateryCoordinateCopy(); 
       const eateryLat = parseFloat(eateryCoordinateData[0].point.lat);
       const eateryLong = parseFloat(eateryCoordinateData[0].point.lng);
       currentEateryCoordinates = `${eateryLat},${eateryLong}`;
+    } catch(e) {console.log(e.name + e.message); return }
     }) //close 2
         .then(() => { //open 3
             getAttractionCoordinates() //4
@@ -45,10 +47,12 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
                             return `<div class="direction">${directionObject.text}</div>`;
                         }
                     ).join("; ")}`;
-                        } else alert("Sorry, direcitons not available. Google Maps much?")
+                        } else alert("Sorry, directions not available. Google Maps much?")
                 }); //close 8
         }); // close 6
     }); //close 3
+
+
 
 });
 
