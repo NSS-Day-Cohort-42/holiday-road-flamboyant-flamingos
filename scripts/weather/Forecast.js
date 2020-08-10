@@ -12,7 +12,7 @@ const render = (forecastData) => {
 
     const day1 = forecastData.slice(0, 8)
     const day2 = forecastData.slice(8, 16)
-    const day3 = forecastData.slice(15, 24)
+    const day3 = forecastData.slice(16, 24)
     const day4 = forecastData.slice(24, 32)
     const day5 = forecastData.slice(32)
     
