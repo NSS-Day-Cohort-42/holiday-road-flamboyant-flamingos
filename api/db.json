@@ -1,34 +1,10 @@
 {
   "itineraries": [
     {
-      "parkName": "Frederick Douglass",
-      "attractionName": "Largest Fork in the US",
-      "eateryName": "The Cozy Inn",
-      "id": 1
-    },
-    {
-      "parkName": "Frederick Douglass",
-      "attractionName": "Owney the Stuffed Dog Postal Mascot",
-      "eateryName": "Pierce's Pitt Bar-B-Que",
-      "id": 2
-    },
-    {
       "parkName": "Big Cypress",
-      "attractionName": "Snake World",
-      "eateryName": "Club Paris",
-      "id": 3
-    },
-    {
-      "parkName": "Fort Stanwix",
-      "attractionName": "Snake World",
-      "eateryName": "H&amp;H Soul Food",
-      "id": 4
-    },
-    {
-      "parkName": "Cuyahoga Valley",
-      "attractionName": "Elvis Memorial Chapel",
-      "eateryName": "McClard's BBQ",
-      "id": 5
+      "attractionName": "Cabazon Dinosaurs",
+      "eateryName": "Deer Park Tavern",
+      "id": 1
     }
   ]
 }
