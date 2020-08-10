@@ -9,6 +9,10 @@ const dispatchStateChangeEvent = () => {
   eventHub.dispatchEvent(itineraryStateChangedEvent)
 }
 
+eventHub.addEventListener("ItineraryDeleteButtonClicked", deleteButtonEvent => {
+    deleteItinerary(deleteButtonEvent.detail.clickedItineraryId)
+})
+
 export const saveItinerary = (itinerary) => {
     const jsonItinerary = JSON.stringify(itinerary)
   
@@ -34,3 +38,14 @@ export const saveItinerary = (itinerary) => {
         itineraries = itinerariesArray
       })
   }
+  
+  const deleteItinerary = itineraryToDeleteId => {
+    return fetch(`http://localhost:8000/itineraries/${itineraryToDeleteId}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(getItineraries)
+    .then(dispatchStateChangeEvent)
+}
