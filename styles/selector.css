@@ -68,6 +68,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 1.5;
+    animation: 20s slider infinite;
 }
 
 .siteLogo { 

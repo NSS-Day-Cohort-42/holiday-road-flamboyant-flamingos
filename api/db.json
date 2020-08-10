@@ -7,7 +7,6 @@
       "id": 1
     },
     {
-<<<<<<< HEAD
       "parkName": "Cape Cod",
       "attractionName": "Fountain of Youth",
       "eateryName": "The Old Clam House",
@@ -17,8 +16,7 @@
       "parkName": "Camp Nelson",
       "attractionName": "Largest Fork in the US",
       "eateryName": "McClard's BBQ",
-      "id": 3
-=======
+      "id": 3,
       "parkName": "Fredericksburg &amp; Spotsylvania",
       "attractionName": "White House Replica",
       "eateryName": "H&amp;H Soul Food",
@@ -41,7 +39,6 @@
       "attractionName": "Man-Killing Clam",
       "eateryName": "Louis' Lunch",
       "id": 5
->>>>>>> master
     }
   ]
 }
