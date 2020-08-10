@@ -2,9 +2,27 @@
   "itineraries": [
     {
       "parkName": "Cuyahoga Valley",
-      "attractionName": "Cabazon Dinosaurs",
-      "eateryName": "Buckhorn Exchange",
+      "attractionName": "Avery’s Beverages",
+      "eateryName": "Occidental Grill &amp; Seafood",
       "id": 1
+    },
+    {
+      "parkName": "Dry Tortugas",
+      "attractionName": "Snake World",
+      "eateryName": "El Charro Cafe",
+      "id": 2
+    },
+    {
+      "parkName": "Frederick Douglass",
+      "attractionName": "White House Replica",
+      "eateryName": "H&amp;H Soul Food",
+      "id": 3
+    },
+    {
+      "parkName": "Camp Nelson",
+      "attractionName": "Cabazon Dinosaurs",
+      "eateryName": "Joe's Stone Crab",
+      "id": 4
     }
   ]
 }
