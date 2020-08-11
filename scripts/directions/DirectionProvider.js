@@ -73,6 +73,7 @@ const renderDirections = () => {
                             })
                             .join(" ")}
                             </div>
+                            <button id="showMapButton"><a href="https://www.google.com/maps/dir/?api=1&origin=nashville&waypoints=${currentEateryCoordinates}|${currentAttractionCoordinates}&destination=${currentParkCoordinates}" target="new">Click for a Map</a></button>
                             </section>
                             `;
                         };
