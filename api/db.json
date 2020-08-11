@@ -1,34 +1,28 @@
 {
   "itineraries": [
     {
-      "parkName": "Belmont-Paul Women's Equality",
-      "attractionName": "White House Replica",
-      "eateryName": "El Charro Cafe",
+      "parkName": "Governors Island",
+      "attractionName": "Giant Abraham Lincoln",
+      "eateryName": "Buckhorn Exchange",
       "id": 1
     },
     {
-      "parkName": "Belmont-Paul Women's Equality",
-      "attractionName": "Owney the Stuffed Dog Postal Mascot",
-      "eateryName": "Club Paris",
+      "parkName": "Charles Pinckney",
+      "attractionName": "Largest Fork in the US",
+      "eateryName": "Louis' Lunch",
       "id": 2
     },
     {
-      "parkName": "Bryce Canyon",
-      "attractionName": "Fountain of Youth",
-      "eateryName": "The Common Man",
+      "parkName": "Charles Pinckney",
+      "attractionName": "Snake World",
+      "eateryName": "Deer Park Tavern",
       "id": 3
     },
     {
-      "parkName": "San Antonio Missions",
-      "attractionName": "Love Butt",
-      "eateryName": "Salt Lick",
+      "parkName": "Cape Cod",
+      "attractionName": "Owney the Stuffed Dog Postal Mascot",
+      "eateryName": "McClard's BBQ",
       "id": 4
-    },
-    {
-      "parkName": "Ozark",
-      "attractionName": "Grave of Marie Laveau, the Voodoo Queen",
-      "eateryName": "The Cozy Inn",
-      "id": 5
     }
   ]
 }

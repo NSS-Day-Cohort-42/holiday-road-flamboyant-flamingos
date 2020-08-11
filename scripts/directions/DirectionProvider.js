@@ -1,7 +1,7 @@
 import keyObj from "../Settings.js";
 
 //global vars
-const contentTarget = document.getElementById("directionsContainer");
+const contentTarget = document.querySelector(".directions");
 const eventHub = document.querySelector(".container");
 
 let currentParkCoordinates;
@@ -63,20 +63,20 @@ eventHub.addEventListener("getDirectionsButtonPressed", (customEvent) => {
 const renderDirections = () => {
   const routeArray = useRouteDataCopy();
   const arrayOfDirections = routeArray[0].instructions;
-  contentTarget.innerHTML = `
-    <section class="directions__header">
-      <h2 class="directions__heading">Directions</h2>
-      <button id="closeDirectionsButton">Close Directions</button>
-    </section>
-    <section class="directionsList">
-      ${arrayOfDirections
-        .map((directionObject) => {
-          return `<div class="direction">${directionObject.text}</div>`;
-        })
-        .join(" ")}
-    </section>
-    `;
-};
+  contentTarget.innerHTML = `<section class="directionsList">
+                            <h2>Directions</h2>
+                            <button id="closeDirectionsButton">Close Directions</button>
+                            <div class="directionsItems">
+                          ${arrayOfDirections
+                            .map((directionObject) => {
+                    return `<div class="direction">${directionObject.text}</div>`;
+                            })
+                            .join(" ")}
+                            </div>
+                            <button id="showMapButton"><a href="https://www.google.com/maps/dir/?api=1&origin=nashville&waypoints=${currentEateryCoordinates}|${currentAttractionCoordinates}&destination=${currentParkCoordinates}" target="new">Click for a Map</a></button>
+                            </section>
+                            `;
+                        };
 
 eventHub.addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "closeDirectionsButton") {
