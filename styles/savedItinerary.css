@@ -14,11 +14,7 @@
 .saveItinerary { 
     display: flex;
 	justify-content: center;
-<<<<<<< Updated upstream
 	margin: 3rem;
-=======
-	/* margin: 3rem; */
->>>>>>> Stashed changes
 }
 
 #showItineraries {
